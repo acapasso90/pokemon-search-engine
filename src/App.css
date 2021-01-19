@@ -12,16 +12,30 @@ margin-bottom: 10px;
 color: #ffffff;
 background-color: #e06464}
 
-.card {background-color: #e8f352;
+.card {border: 10px solid #e8f352;
+  background-color: #adadad;
   margin-top: 50px;
-height: 300px;
-width: 170px;
-margin-left:  20px;
+height: 340px;
+width: 220px;
+margin-left:  50px;
+margin-right: 50px;
 border-radius: 4%;
 }
 
-.PokeSearch img {min-height: 150px;
-  margin-top: 20px;
+.water {  background-color: #72c4ff;}
+.psychic {  background-color: #c746ff}
+.electric {  background-color: #fcff46}
+.grass {  background-color: #D1F589}
+.ghost {  background-color: #621783;}
+.fire {  background-color: #ff2a2a;}
+.fighting {background-color:  #ff984f}
+.fairy {background-color: #ff83ee;}
+.dragon {background-color: #988732;}
+.darkness {background-color: #24221a;
+color: #ffffff;}
+.pokeName {text-transform: capitalize;}
+.PokeSearch img {min-height: 200px;
+  position: relative;
 background-color: #adadad;}
 
 .row {display: flex;
