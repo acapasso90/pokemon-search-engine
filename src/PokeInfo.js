@@ -209,7 +209,7 @@ if (shinyIcon != null){
     <div className="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} alt="icon" /> </div>
     <div className="card" id="card2"> 
-    <h3 className="pokeName">{pokename}</h3>
+    <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} alt="shiny" /> </div></div>
     </div>    )}
 
