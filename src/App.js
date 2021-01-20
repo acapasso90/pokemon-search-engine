@@ -2,6 +2,7 @@ import './App.css';
 import alcremie from "./alcremie.gif";
 import Header from "./Header.js"
 import PokeSearch from "./PokeSearch.js"
+import Footer from "./Footer.js"
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
        Hey chat! We're building a Pokémon Search Engine together today 🍓 
         </p>
         <PokeSearch />
-      </header>
-    </div>
+      </header>    </div>
+      <Footer />
     </div>
   );
 }

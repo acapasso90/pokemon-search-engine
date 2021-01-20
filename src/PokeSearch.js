@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import axios from "axios";
 import loading from "./loading.gif";
 import PokeInfo from "./PokeInfo.js";
@@ -7,11 +7,12 @@ export default function PokeSearch(){
 const [pokemon, Setpokemon] = useState("alcremie");
 const [pokeinfo, Setpokeinfo] = useState("");
 const [loaded, setLoaded] = useState(false);
-
+const [loadedStatus, setLoadedStatus] = useState(" ");
 
 function setInfo(response){
     Setpokeinfo(response.data)
 setLoaded(true);
+setLoadedStatus("loaded");
 }
 
 function handleSubmit(event){  event.preventDefault();
@@ -35,17 +36,13 @@ if(loaded){return(
     <input type="text" onChange={setPokemon} placeholder="Type a Pokemon Name" />
     <input type="submit" placeholder="Submit" />
     </form>
-    <PokeInfo data={pokeinfo} />
+    <PokeInfo data={pokeinfo} loading={loadedStatus} />
         </div>)}
 
 else{ searchPokemon();
     return(
 <div className="loading">
-<form onSubmit={handleSubmit} >
-    <input type="text" onChange={setPokemon} placeholder="Type a Pokemon Name" />
-    <input type="submit" placeholder="Submit" />
-    </form>
-    <h2>currently loading pokemon</h2> 
+    <img src={loading.gif} alt="loading" />
 </div>
 
 )}
