@@ -1,3 +1,15 @@
+a {color: #9c0101;
+text-decoration: none;
+font-weight: bold;}
+
+a:hover {
+color: #610202;}
+
+body {font-size: 18pt;}
+
+
+::selection {background-color: #9c0101;
+color: #e7d6d6;}
 .App {
   text-align: center;
 }
@@ -15,38 +27,62 @@ background-color: #e06464}
 
 
 
-.card {border: 10px solid #e8f352;
-  background-color: #adadad;
+.card {
   margin-top: 50px;
-height: 340px;
-width: 220px;
+min-height: 414px;
+width: 18.4%;
 margin-left:  50px;
 margin-right: 50px;
-border-radius: 4%;
+border-radius: 5%;
 }
 
-.water {  background-color: #72c4ff;}
-.psychic {  background-color: #c746ff}
-.electric {  background-color: #fcff46}
-.grass {  background-color: #D1F589}
-.ghost {  background-color: #621783;}
-.ice {  background-color: #9cd1f7;}
-.fire {  background-color: #ff2a2a;}
-.rocK {background-color: #4e4410;}
-.steel {background-color: #c7c2c2;}
-.fighting {background-color:  #ff984f}
-.fairy {background-color: #ff83ee;}
-.dragon {background-color: #988732;}
-.darkness {background-color: #24221a;
+footer p {font-size: 20px;}
+.water { 
+  background-image: url(./Water.png);}
+.psychic {  background-image: url(./Psychic.png);}
+.electric {  background-image: url(./Lightning.png);}
+.grass {  background-image: url(./Grass.png);}
+.ghost {  background-image: url(./Ghost.png);}
+  .ground {background-image: url(./Ground.png)}
+.ice { background-image: url(./Ice.png);}
+.fire {  background-image: url(./Fire.png);}
+ .normal {background-image: url(./Normal.png);}
+.rock { background-image: url(./Rock.png);}
+.steel { background-image: url(./Steel.png);}
+.fighting { background-image: url(./Fighting.png);}
+.fairy {background-image: url(./Fairy.png);}
+.dragon {background-image: url(./Dragon.png);}
+.darkness {background-image: url(./Darkness.png);
 color: #ffffff;}
 
-.pokeName {text-transform: capitalize;}
+.pokeName {text-transform: capitalize;
+position: relative;
+top: -10px;
+font-size: 16pt;
+}
 
-.PokeSearch img {height: 50%;
+
+.PokeSearch img {height: 40%;
+  width: 83%;
   position: relative;
-background-color: #adadad;}
+  right: -1.1px;
+  top: -28px;
+background-image: url(./background.jpg);
+background-size: 170% 170%;}
 
 .row {display: flex;
 flex-direction: row;
 justify-content: center;
 width: 100%;}
+
+.searchBar {height: 35px;
+  width: 20%;
+  font-size: 15pt;
+margin-right: 2px;}
+
+.submitButton {background-color: #9c0101;
+  color: #e7d6d6;
+border: 3px solid #4b0000;
+width: 80px;
+font-size: 15pt;
+height: 40px;}
