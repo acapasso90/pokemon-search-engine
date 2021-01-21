@@ -43,6 +43,7 @@ footer p {font-size: 20px;}
 .electric {  background-image: url(./Lightning.png);}
 .grass {  background-image: url(./Grass.png);}
 .ghost {  background-image: url(./Ghost.png);}
+.poison {background-image: url(./Poison.png);}
   .ground {background-image: url(./Ground.png)}
 .ice { background-image: url(./Ice.png);}
 .fire {  background-image: url(./Fire.png);}
@@ -86,3 +87,28 @@ border: 3px solid #4b0000;
 width: 80px;
 font-size: 15pt;
 height: 40px;}
+
+
+@media only screen and (max-width: 500px){
+  .PokeSearch img {height: 40%;
+    width: 112px;
+   }
+
+  .card {width: 205px;
+    background-size: 135px 97%;
+  background-repeat: no-repeat;}
+
+  .pokeName {white-space: nowrap;
+    font-size: 14pt;
+    }
+ }
+
+
+
+@media only screen and (max-width: 1025px) and (min-width: 501px){
+  .PokeSearch img {height: 40%;
+    width: 255px;
+   }
+
+  .card {width: 294px;}
+ }
