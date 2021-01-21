@@ -10,7 +10,7 @@ function App() {
       <div className="container">
       <header className="App-header">
         <Header />
-        <img src={alcremie} alt="alcremie" />
+        <img src={alcremie} alt="alcremie" className="alcremieGif" />
         <p>
        Hey chat! We're building a Pokémon Search Engine together today 🍓 
         </p>

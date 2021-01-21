@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+.alcremieGif {width: 20%;}
 .container {width: 100vw;}
 
 .header {width: 100%;
@@ -38,8 +39,10 @@ border-radius: 4%;
 .dragon {background-color: #988732;}
 .darkness {background-color: #24221a;
 color: #ffffff;}
+
 .pokeName {text-transform: capitalize;}
-.PokeSearch img {min-height: 200px;
+
+.PokeSearch img {height: 50%;
   position: relative;
 background-color: #adadad;}
 
