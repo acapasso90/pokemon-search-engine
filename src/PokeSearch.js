@@ -43,7 +43,7 @@ if(loaded){return(
 else{ searchPokemon();
     return(
 <div className="loading">
-    <img src={loading.gif} alt="loading" />
+    <img src={loading} alt="loading" />
 </div>
 
 )}
