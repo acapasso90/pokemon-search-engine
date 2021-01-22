@@ -39,6 +39,7 @@ border-radius: 5%;
 }
 
 footer p {font-size: 20px;}
+.bug {background-image: url(./bug.png);}
 .water { 
   background-image: url(./Water.png);}
 .psychic {  background-image: url(./Psychic.png);}

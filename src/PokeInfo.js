@@ -17,26 +17,40 @@ let shinyCard = document.getElementById('card2');
 if(loaded === "loaded"){
 if (type === "water") {card.classList.remove('steel'); card.classList.remove('psychic');
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('ghost');
+card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('bug');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
 card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
+shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     card.classList.add('water'); shinyCard.classList.add('water');} 
 
+    else if (type === "bug"){card.classList.remove('steel'); card.classList.remove('psychic');
+    card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
+    card.classList.remove('grass'); card.classList.remove('ghost');
+    card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
+    card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
+    card.classList.remove('darkness'); card.classList.remove('fighting');
+    shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
+    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); 
+    shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
+    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
+    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
+    shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
+        card.classList.add('bug'); shinyCard.classList.add('bug');} 
+
     else if (type === "ground") {card.classList.remove('steel'); card.classList.remove('psychic');
     card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
     card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('water');
     card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-    card.classList.remove('fire'); card.classList.remove('dragon');
+    card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
     card.classList.remove('darkness'); card.classList.remove('fighting');
     shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
+    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
     shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('water');
     shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
     shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
@@ -47,10 +61,10 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('ground');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon');
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('water'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
+shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
@@ -58,7 +72,7 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     card.classList.add('steel'); shinyCard.classList.add('steel');}
 
     else if (type === "normal"){card.classList.remove('water'); card.classList.remove('psychic');
-    card.classList.remove('electric'); card.classList.remove('ice');
+    card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
     card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
     card.classList.remove('steel'); card.classList.remove('fairy'); card.classList.remove('rock');
     card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('poison');
@@ -66,7 +80,7 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     shinyCard.classList.remove('water'); shinyCard.classList.remove('psychic');
     shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('ground');
     shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost');  shinyCard.classList.remove('steel');
-    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock');
+    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('bug');
     shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
     shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
         card.classList.add('normal'); shinyCard.classList.add('normal');}
@@ -76,19 +90,19 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon');
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('water');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
+shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('bug');
     card.classList.add('psychic'); shinyCard.classList.add('psychic');}
 
     else if (type === "poison"){card.classList.remove('steel'); card.classList.remove('psychic');
     card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('water');
-    card.classList.remove('grass'); card.classList.remove('ghost');
+    card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('bug');
     card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
     card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
     card.classList.remove('darkness'); card.classList.remove('fighting'); 
@@ -96,12 +110,12 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
     shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
     shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); 
+    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon');  shinyCard.classList.remove('bug');
     shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('water');
         card.classList.add('poison'); shinyCard.classList.add('poison');} 
 
 else if (type === "electric") {    card.classList.remove('steel'); card.classList.remove('water');
-card.classList.remove('psychic'); card.classList.remove('ice');
+card.classList.remove('psychic'); card.classList.remove('ice'); card.classList.remove('bug');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
 card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('poison');
@@ -110,7 +124,7 @@ shinyCard.classList.remove('steel'); shinyCard.classList.remove('water');
 shinyCard.classList.remove('psychic'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon');
+shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     card.classList.add('electric'); shinyCard.classList.add('electric');}
 
@@ -119,27 +133,27 @@ card.classList.remove('electric'); card.classList.remove('water');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
 card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
-card.classList.remove('darkness'); card.classList.remove('fighting');
+card.classList.remove('darkness'); card.classList.remove('fighting'); card.classList.remove('bug');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('water');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
+shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('bug');
     card.classList.add('ice'); shinyCard.classList.add('ice');}
 
 else if (type === "grass") {card.classList.remove('steel'); card.classList.remove('psychic');
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('water'); card.classList.remove('ghost'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon');
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
 shinyCard.classList.remove('water'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
+shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('bug');
     card.classList.add('grass'); shinyCard.classList.add('grass');
     }
 
@@ -148,25 +162,25 @@ else if (type === "ghost") {card.classList.remove('steel'); card.classList.remov
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('water'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon');
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('water'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon');
+shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     card.classList.add('ghost'); shinyCard.classList.add('ghost');}
 
 else if (type === "fire") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice');
+card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
 card.classList.remove('water'); card.classList.remove('dragon'); card.classList.remove('ground');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost');
+shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('water'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('normal');
@@ -174,13 +188,13 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); 
     }
 
 else if (type === "fairy") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice');
+card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
 card.classList.remove('water'); card.classList.remove('rock'); card.classList.remove('normal');
 card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
+shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('water'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
@@ -191,10 +205,10 @@ else if (type === "rock") {card.classList.remove('steel'); card.classList.remove
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('normal');
 card.classList.remove('fairy'); card.classList.remove('water'); card.classList.remove('ground');
-card.classList.remove('fire'); card.classList.remove('dragon');
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
+shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('water'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
@@ -205,10 +219,10 @@ else if (type === "dragon") {card.classList.remove('steel'); card.classList.remo
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('water');
+card.classList.remove('fire'); card.classList.remove('water'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
+shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('water'); shinyCard.classList.remove('normal');
@@ -219,28 +233,28 @@ else if (type === "dark"){card.classList.remove('steel'); card.classList.remove(
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon');
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('water'); card.classList.remove('fighting');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost');
+shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('bug');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
 shinyCard.classList.remove('water'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('poison');
-    card.classList.add('darkness'); shinyCard.classList.add('darkness');}
+    card.classList.add('darkness'); shinyCard.classList.add('darkness');} 
 
 else {card.classList.remove('steel'); card.classList.remove('psychic');
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); 
+card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
 card.classList.remove('darkness'); card.classList.remove('water');
 shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
 shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('water');
+shinyCard.classList.remove('darkness'); shinyCard.classList.remove('water'); shinyCard.classList.remove('bug');
     card.classList.add('fighting'); shinyCard.classList.add('fighting');
 }}
 
