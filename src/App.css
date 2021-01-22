@@ -15,6 +15,8 @@ color: #e7d6d6;}
 }
 
 .alcremieGif {width: 20%;}
+
+.builtBy {margin-top: 4%;}
 .container {width: 100vw;}
 
 .header {width: 100%;
@@ -90,17 +92,38 @@ height: 40px;}
 
 
 @media only screen and (max-width: 500px){
-  .PokeSearch img {height: 40%;
-    width: 112px;
+
+  .alcremieGif {width: 30%;}
+
+
+  .PokeSearch img {height: 31%;
+    top: -28px;
+    width: 184px;
    }
 
-  .card {width: 205px;
-    background-size: 135px 97%;
+  .card {min-width: 220px;
+    background-size: 220px 80%;
+    margin-left:  10px;
+    margin-top: 40px;
+    margin-right: 10px;
+    min-height: 354px;
   background-repeat: no-repeat;}
+
+  .header {
+  font-size: 30pt;
+  margin-bottom: 10px;
+  color: #ffffff; 
+  background-color: #e06464}
 
   .pokeName {white-space: nowrap;
     font-size: 14pt;
     }
+
+    .searchBar {
+      width: 50%;
+      }
+
+    
  }
 
 
