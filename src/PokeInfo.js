@@ -71,7 +71,7 @@ shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyC
 shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
     card.classList.add('steel'); shinyCard.classList.add('steel');}
 
-    else if (type === "normal"){card.classList.remove('water'); card.classList.remove('psychic');
+    else if (type === "normal" || type === "flying"){card.classList.remove('water'); card.classList.remove('psychic');
     card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
     card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
     card.classList.remove('steel'); card.classList.remove('fairy'); card.classList.remove('rock');
