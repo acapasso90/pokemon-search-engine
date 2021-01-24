@@ -52,6 +52,7 @@ useEffect(() => {
 
 let type = props.data.types[0].type.name;
 let pokename = (props.data.forms[0].name);
+
 let card = document.querySelector('.card');
 let shinyCard = document.getElementById('card2');
 if(loaded === "loaded"){
@@ -301,16 +302,17 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('water'); shi
 
 if (shinyIcon != null && abilityList.length <= 1){
     return(<div className="pokeInfo">
+        <h3 className="nameTitle">{pokename}</h3>
     <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
             <h3>Base Stats</h3>
-        {stat1name}: {stat1} <br />
-    {stat2name}: {stat2} <br />
-    {stat3name}: {stat3} <br />
-        {stat4name}: {stat4} <br />
-        {stat5name}: {stat5} <br />
-        {stat6name}: {stat6} <br />
+            <p> <b>{stat1name} </b>: {stat1} </p> 
+      <p><b> {stat2name}</b> : {stat2} </p>
+      <p> <b> {stat3name}</b> : {stat3} </p>
+      <p><b>{stat4name}</b>: {stat4} </p>
+      <p><b>{stat5name}</b> : {stat5} </p>
+      <p><b>{stat6name}</b> : {stat6} </p>
         </div>
     </div>
     <EvolutionInfo data={pokeInfo} />
@@ -327,16 +329,17 @@ if (shinyIcon != null && abilityList.length <= 1){
     </div>    )}
 
     else if (abilityList.length > 1) {return(<div className="pokeInfo">
+                   <h3 className="nameTitle">{pokename}</h3>
     <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
         <h3>Base Stats</h3>
-        {stat1name}: {stat1} <br />
-    {stat2name}: {stat2} <br />
-    {stat3name}: {stat3} <br />
-        {stat4name}: {stat4} <br />
-        {stat5name}: {stat5} <br />
-        {stat6name}: {stat6} <br />
+        <p> <b>{stat1name} </b>: {stat1} </p> 
+      <p><b> {stat2name}</b> : {stat2} </p>
+      <p> <b> {stat3name}</b> : {stat3} </p>
+      <p><b>{stat4name}</b>: {stat4} </p>
+      <p><b>{stat5name}</b> : {stat5} </p>
+      <p><b>{stat6name}</b> : {stat6} </p>
         </div>
     </div>
     <EvolutionInfo data={pokeInfo} />
@@ -359,16 +362,17 @@ if (shinyIcon != null && abilityList.length <= 1){
 
 
 else { return(<div className="pokeInfo">
+        <h3 className="nameTitle">{pokename}</h3>
 <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
         <h3>Base Stats</h3>
-        {stat1name}: {stat1} <br />
-    {stat2name}: {stat2} <br />
-    {stat3name}: {stat3} <br />
-        {stat4name}: {stat4} <br />
-        {stat5name}: {stat5} <br />
-        {stat6name}: {stat6} <br />
+      <p> <b>{stat1name} </b>: {stat1} </p> 
+      <p><b> {stat2name}</b> : {stat2} </p>
+      <p> <b> {stat3name}</b> : {stat3} </p>
+      <p><b>{stat4name}</b>: {stat4} </p>
+      <p><b>{stat5name}</b> : {stat5} </p>
+      <p><b>{stat6name}</b> : {stat6} </p>
         </div>
     </div>
     <EvolutionInfo data={pokeInfo} />
