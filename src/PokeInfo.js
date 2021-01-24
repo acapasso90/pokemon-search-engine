@@ -27,7 +27,6 @@ let stat5 = props.data.stats[4].base_stat;
 let stat6name = props.data.stats[5].stat.name;
 let stat6 = props.data.stats[5].base_stat;
 let evolutionURL = props.data.species.url;
-const cancelTokenSource = axios.CancelToken.source();
 const [pokeInfo, setPokeInfo] = useState("");
 
 function showEvolutionExtendedInfo(response){
@@ -41,13 +40,14 @@ axios.get(APIurl).then(showEvolutionExtendedInfo);}
 
 useEffect(() => {
     let mounted = true;
+    const cancelTokenSource = axios.CancelToken.source();
     if (mounted) {axios.get(evolutionURL, {
         cancelToken: cancelTokenSource.token
       }).then(showEvolutionInfo);}
     return function cleanup() {
       mounted = false
       cancelTokenSource.cancel();
-  }}, []);
+  }}, [evolutionURL]);
 
 
 let type = props.data.types[0].type.name;
@@ -301,6 +301,19 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('water'); shi
 
 if (shinyIcon != null && abilityList.length <= 1){
     return(<div className="pokeInfo">
+    <img src={pokePicture} className="officialImg" alt="officialArtwork" />
+    <div className="right">
+        <div className="column">
+            <h3>Base Stats</h3>
+        {stat1name}: {stat1} <br />
+    {stat2name}: {stat2} <br />
+    {stat3name}: {stat3} <br />
+        {stat4name}: {stat4} <br />
+        {stat5name}: {stat5} <br />
+        {stat6name}: {stat6} <br />
+        </div>
+    </div>
+    <EvolutionInfo data={pokeInfo} />
     <div className="row">
     <div className="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
@@ -311,20 +324,22 @@ if (shinyIcon != null && abilityList.length <= 1){
     <img src={shinyIcon} className="icon" alt="shiny" /> 
  Ability: {ability1}
 </div></div>
+    </div>    )}
+
+    else if (abilityList.length > 1) {return(<div className="pokeInfo">
     <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
-    <div className="column">
-    {stat1name}: {stat1} <br />
+        <div className="column">
+        <h3>Base Stats</h3>
+        {stat1name}: {stat1} <br />
     {stat2name}: {stat2} <br />
     {stat3name}: {stat3} <br />
         {stat4name}: {stat4} <br />
         {stat5name}: {stat5} <br />
         {stat6name}: {stat6} <br />
-</div>
+        </div>
     </div>
-    </div>    )}
-
-    else if (abilityList.length > 1) {return(<div className="pokeInfo">
+    <EvolutionInfo data={pokeInfo} />
     <div className="row">
     <div className="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
@@ -339,9 +354,15 @@ if (shinyIcon != null && abilityList.length <= 1){
  <br />
  Ability: {ability2}
 </div></div>
-    <img src={pokePicture} className="officialImg" alt="officialArtwork" />
+
+    </div>    )}
+
+
+else { return(<div className="pokeInfo">
+<img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
+        <h3>Base Stats</h3>
         {stat1name}: {stat1} <br />
     {stat2name}: {stat2} <br />
     {stat3name}: {stat3} <br />
@@ -351,26 +372,12 @@ if (shinyIcon != null && abilityList.length <= 1){
         </div>
     </div>
     <EvolutionInfo data={pokeInfo} />
-    </div>    )}
-
-
-else { return(<div className="pokeInfo">
-<div className="row">
+    <div className="row">
 <div className="card" id="card" > 
 <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />  Ability: {ability1}
 <div className="hidden2">Hidden</div> Ability: {ability2}
 </div>
 </div>
-    <img src={pokePicture} className="officialImg" alt="officialArtwork" />
-    <div className="right">
-        <div className="column">
-    {stat1name}: {stat1} <br />
-    {stat2name}: {stat2} <br />
-    {stat3name}: {stat3} <br />
-        {stat4name}: {stat4} <br />
-        {stat5name}: {stat5} <br />
-        {stat6name}: {stat6} <br />
-        </div>
-    </div>
+
 
 </div>)}}
