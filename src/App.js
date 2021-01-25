@@ -2,6 +2,7 @@ import './App.css';
 import alcremie from "./alcremie.gif";
 import Header from "./Header.js"
 import PokeSearch from "./PokeSearch.js"
+import ExtendedPokeSearch from "./ExtendedPokeSearch.js";
 import Footer from "./Footer.js"
 
 function App() {

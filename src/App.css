@@ -114,10 +114,17 @@ margin-right: 2px;}
 .submitButton {background-color: #9c0101;
   color: #e7d6d6;
 border: 3px solid #4b0000;
+position: absolute;
 width: 80px;
 font-size: 15pt;
 height: 40px;}
 
+.submitButton:active {margin-top: 2px;
+animation: button 0.5s;}
+
+.submitButton:hover {background-color: #e7d6d6;
+  color: #9c0101;}
+@keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
 @media only screen and (max-width: 500px){
 

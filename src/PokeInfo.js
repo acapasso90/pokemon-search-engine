@@ -33,9 +33,11 @@ function showEvolutionExtendedInfo(response){
     setPokeInfo(response.data);}
 
 function showEvolutionInfo(response){
-let evolutionName = response.data.evolves_from_species.name;
+let doesEvolve = response.data.evolves_from_species;
+if (doesEvolve != null){
+    let evolutionName = response.data.evolves_from_species.name;
 const APIurl = `https://pokeapi.co/api/v2/pokemon/${evolutionName}`;
-axios.get(APIurl).then(showEvolutionExtendedInfo);}
+axios.get(APIurl).then(showEvolutionExtendedInfo);}}
 
 
 useEffect(() => {
@@ -51,6 +53,8 @@ useEffect(() => {
 
 
 let type = props.data.types[0].type.name;
+let type2 = null;
+if (props.data.types.length > 1){type2 = props.data.types[1].type.name;}
 let pokename = (props.data.forms[0].name);
 
 let card = document.querySelector('.card');
@@ -300,9 +304,10 @@ shinyCard.classList.remove('darkness'); shinyCard.classList.remove('water'); shi
 }}
 
 
-if (shinyIcon != null && abilityList.length <= 1){
+if (shinyIcon != null && abilityList.length <= 1 && type2 != null ){
     return(<div className="pokeInfo">
         <h3 className="nameTitle">{pokename}</h3>
+        <p>{type} / {type2} </p>
     <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
@@ -328,8 +333,9 @@ if (shinyIcon != null && abilityList.length <= 1){
 </div></div>
     </div>    )}
 
-    else if (abilityList.length > 1) {return(<div className="pokeInfo">
+    else if (abilityList.length > 1 ) {return(<div className="pokeInfo">
                    <h3 className="nameTitle">{pokename}</h3>
+                   <p>{type}</p>
     <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
@@ -363,6 +369,7 @@ if (shinyIcon != null && abilityList.length <= 1){
 
 else { return(<div className="pokeInfo">
         <h3 className="nameTitle">{pokename}</h3>
+        <p>{type} / {type2} </p>
 <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">

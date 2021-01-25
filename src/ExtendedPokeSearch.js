@@ -5,41 +5,43 @@ import ExtendedPokeInfo from "./ExtendedPokeInfo.js"
 
 
 export default function PokeSearch(){
-    const [pokemon, Setpokemon] = useState("alcremie");
+    const [pokemonType, setPokemonType] = useState("dark");
+    const [arrayLength, setArrayLength] = useState("");
     const [pokeinfo, Setpokeinfo] = useState("");
     const [loaded, setLoaded] = useState(false);
     const [loadedStatus, setLoadedStatus] = useState(" ");
     
     function setInfo(response){
-        Setpokeinfo(response.data)
+        Setpokeinfo(response.data.pokemon);
+       setArrayLength(response.data.pokemon.length);
     setLoaded(true);
     setLoadedStatus("loaded");
     }
     
     function handleSubmit(event){  event.preventDefault();
-        const APIurl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+        const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
     axios.get(APIurl).then(setInfo);
     }
     
     
     function setPokemon(event){
         event.preventDefault();
-       const pokemonLowercase = (event.target.value).toLowerCase();
-        Setpokemon(pokemonLowercase);
+       const pokemonTypeLowercase = (event.target.value).toLowerCase();
+       setPokemonType(pokemonTypeLowercase);
     }
     
-    function extendedSearch() {const APIurl = `https://pokeapi.co/api/v2/pokemon?limit=150`;
-    axios.get(APIurl).then(setExtendedInfo);}
+    function extendedSearch() {
+        const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
+    axios.get(APIurl).then(setInfo);}
     
     if(loaded){return(
             <div className="PokeSearch">
         <form onSubmit={handleSubmit} >
-        <input type="text" onChange={setPokemon} placeholder="Type a Pokemon Name" 
+        <input type="text" onChange={setPokemon} placeholder="Type a Pokémon Type" 
         className="searchBar" />
         <input type="submit" placeholder="Submit" className="submitButton" />
         </form>
-        <ExtendedPokeInfo data={pokeinfo[0].url} />
-   <ExtendedPokeInfo data={pokeinfo[50].url} />
+        {pokeinfo.slice(0, arrayLength).map(function(pokemonNumber){return(<ExtendedPokeInfo data={pokemonNumber.pokemon.url} loading={loadedStatus}/>)})}
             </div>)}
     
     else{ extendedSearch();
