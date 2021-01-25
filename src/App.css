@@ -124,6 +124,12 @@ animation: button 0.5s;}
 
 .submitButton:hover {background-color: #e7d6d6;
   color: #9c0101;}
+
+  .weakness img {height: 50px;
+  display: none;}
+
+  .weak2 {display: inherit!important;}
+
 @keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
 @media only screen and (max-width: 500px){
