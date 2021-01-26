@@ -343,12 +343,25 @@ else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {retu
   <div className="strengths">
         <b><p>Effective Against</p></b>
         <div className="row">
-    <img src={bugIcon} alt="bug" className="bugIconStr" /> <img src={darkIcon} alt="dark" className="darkIconStr" /> <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  
-    <img src={electricIcon} alt="electric" className="electricIconStr" /> <img src={waterIcon} alt="water" className="waterIconStr" />
-      <img src={fairyIcon} alt="fairy" className="fairyIconStr" /> <img src={fightingIcon} alt="fighting" className="fightingIconStr"/> <img src={fireIcon} alt="fire" className="fireIconStr"/> <img src={flyingIcon} alt="flying" className="flyingIconStr"/>
-      <img src={grassIcon} alt="grass" className="grassIconStr"/> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <img src={groundIcon} alt="ground" className="groundIconStr" /> <img src={iceIcon} alt="ice"  className="iceIconStr"/>
-    <img src={normalIcon} alt="normal" className="normalIconStr"/> <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/>  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/>
-    <img src={steelIcon} alt="steel" className="steelIconStr"/>
+        <div className="bugAttribute">  
+      <img src={bugIcon} alt="bug" className="bugIconStr" /><label className="hidden" id="hiddenBug">Bug</label></div>
+      <div className="darkAttribute">     <img src={darkIcon} alt="dark" className="darkIconStr" /><label className="hidden" id="hiddenDark">Dark</label></div>
+      <div className="dragonAttribute">   <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  <label className="hidden" id="hiddenDragon">Dragon</label></div>
+       <div className="electricAttribute">  <img src={electricIcon} alt="electric" className="electricIconStr" /><label className="hidden" id="hiddenElectric">Electric</label> </div>
+       <div className="waterAttribute"> <img src={waterIcon} alt="water" className="waterIconStr" /><label className="hidden" id="hiddenWater">Water</label></div>
+    <div className="fairyAttribute">   <img src={fairyIcon} alt="fairy" className="fairyIconStr" /><label className="hidden" id="hiddenFairy">Fairy</label></div>
+      <div className="fightingAttribute">  <img src={fightingIcon} alt="fighting" className="fightingIconStr"/><label className="hidden" id="hiddenFighting">Fighting</label> </div>
+      <div className="fireAttribute"> <img src={fireIcon} alt="fire" className="fireIconStr"/><label className="hidden" id="hiddenFire">Fire</label> </div>
+      <div className="flyingAttribute">  <img src={flyingIcon} alt="flying" className="flyingIconStr"/><label className="hidden" id="hiddenFlying">Flying</label></div>
+      <div className="grassAttribute"> <img src={grassIcon} alt="grass" className="grassIconStr"/> <label className="hidden" id="hiddenGrass">Grass</label></div>
+      <div className="ghostAttribute"> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <label className="hidden" id="hiddenGhost">Ghost</label></div>
+      <div className="groundAttribute"> <img src={groundIcon} alt="ground" className="groundIconStr" /><label className="hidden" id="hiddenGround">Ground</label></div>
+      <div className="iceAttribute">  <img src={iceIcon} alt="ice"  className="iceIconStr"/><label className="hidden" id="hiddenIce">Ice</label></div>
+      <div className="normalAttribute">  <img src={normalIcon} alt="normal" className="normalIconStr"/><label className="hidden" id="hiddenNormal">Normal</label></div>
+      <div className="poisonAttribute">  <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <label className="hidden" id="hiddenPoison">Poison</label></div>
+      <div className="psychicAttribute"> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/> <label className="hidden" id="hiddenPsychic">Psychic</label></div>
+      <div className="rockAttribute">  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/><label className="hidden" id="hiddenRock">Rock</label></div>
+    <div className="steelAttribute">    <img src={steelIcon} alt="steel" className="steelIconStr"/><label className="hidden" id="hiddenSteel">Steel</label></div>
   </div>
   </div>
   </div>
@@ -415,12 +428,25 @@ Ability: {ability2}
   <div className="strengths">
         <b><p>Effective Against</p></b>
         <div className="row">
-    <img src={bugIcon} alt="bug" className="bugIconStr" /> <img src={darkIcon} alt="dark" className="darkIconStr" /> <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  
-    <img src={electricIcon} alt="electric" className="electricIconStr" /> <img src={waterIcon} alt="water" className="waterIconStr" />
-      <img src={fairyIcon} alt="fairy" className="fairyIconStr" /> <img src={fightingIcon} alt="fighting" className="fightingIconStr"/> <img src={fireIcon} alt="fire" className="fireIconStr"/> <img src={flyingIcon} alt="flying" className="flyingIconStr"/>
-      <img src={grassIcon} alt="grass" className="grassIconStr"/> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <img src={groundIcon} alt="ground" className="groundIconStr" /> <img src={iceIcon} alt="ice"  className="iceIconStr"/>
-    <img src={normalIcon} alt="normal" className="normalIconStr"/> <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/>  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/>
-    <img src={steelIcon} alt="steel" className="steelIconStr"/>
+        <div className="bugAttribute">  
+      <img src={bugIcon} alt="bug" className="bugIconStr" /><label className="hidden" id="hiddenBug">Bug</label></div>
+      <div className="darkAttribute">     <img src={darkIcon} alt="dark" className="darkIconStr" /><label className="hidden" id="hiddenDark">Dark</label></div>
+      <div className="dragonAttribute">   <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  <label className="hidden" id="hiddenDragon">Dragon</label></div>
+       <div className="electricAttribute">  <img src={electricIcon} alt="electric" className="electricIconStr" /><label className="hidden" id="hiddenElectric">Electric</label> </div>
+       <div className="waterAttribute"> <img src={waterIcon} alt="water" className="waterIconStr" /><label className="hidden" id="hiddenWater">Water</label></div>
+    <div className="fairyAttribute">   <img src={fairyIcon} alt="fairy" className="fairyIconStr" /><label className="hidden" id="hiddenFairy">Fairy</label></div>
+      <div className="fightingAttribute">  <img src={fightingIcon} alt="fighting" className="fightingIconStr"/><label className="hidden" id="hiddenFighting">Fighting</label> </div>
+      <div className="fireAttribute"> <img src={fireIcon} alt="fire" className="fireIconStr"/><label className="hidden" id="hiddenFire">Fire</label> </div>
+      <div className="flyingAttribute">  <img src={flyingIcon} alt="flying" className="flyingIconStr"/><label className="hidden" id="hiddenFlying">Flying</label></div>
+      <div className="grassAttribute"> <img src={grassIcon} alt="grass" className="grassIconStr"/> <label className="hidden" id="hiddenGrass">Grass</label></div>
+      <div className="ghostAttribute"> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <label className="hidden" id="hiddenGhost">Ghost</label></div>
+      <div className="groundAttribute"> <img src={groundIcon} alt="ground" className="groundIconStr" /><label className="hidden" id="hiddenGround">Ground</label></div>
+      <div className="iceAttribute">  <img src={iceIcon} alt="ice"  className="iceIconStr"/><label className="hidden" id="hiddenIce">Ice</label></div>
+      <div className="normalAttribute">  <img src={normalIcon} alt="normal" className="normalIconStr"/><label className="hidden" id="hiddenNormal">Normal</label></div>
+      <div className="poisonAttribute">  <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <label className="hidden" id="hiddenPoison">Poison</label></div>
+      <div className="psychicAttribute"> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/> <label className="hidden" id="hiddenPsychic">Psychic</label></div>
+      <div className="rockAttribute">  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/><label className="hidden" id="hiddenRock">Rock</label></div>
+    <div className="steelAttribute">    <img src={steelIcon} alt="steel" className="steelIconStr"/><label className="hidden" id="hiddenSteel">Steel</label></div>
   </div>
   </div>
   </div>
@@ -491,12 +517,25 @@ else { return(<div className="pokeInfo">
   <div className="strengths">
         <b><p>Effective Against</p></b>
         <div className="row">
-    <img src={bugIcon} alt="bug" className="bugIconStr" /> <img src={darkIcon} alt="dark" className="darkIconStr" /> <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  
-    <img src={electricIcon} alt="electric" className="electricIconStr" /> <img src={waterIcon} alt="water" className="waterIconStr" />
-      <img src={fairyIcon} alt="fairy" className="fairyIconStr" /> <img src={fightingIcon} alt="fighting" className="fightingIconStr"/> <img src={fireIcon} alt="fire" className="fireIconStr"/> <img src={flyingIcon} alt="flying" className="flyingIconStr"/>
-      <img src={grassIcon} alt="grass" className="grassIconStr"/> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <img src={groundIcon} alt="ground" className="groundIconStr" /> <img src={iceIcon} alt="ice"  className="iceIconStr"/>
-    <img src={normalIcon} alt="normal" className="normalIconStr"/> <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/>  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/>
-    <img src={steelIcon} alt="steel" className="steelIconStr"/>
+        <div className="bugAttribute">  
+      <img src={bugIcon} alt="bug" className="bugIconStr" /><label className="hidden" id="hiddenBug">Bug</label></div>
+      <div className="darkAttribute">     <img src={darkIcon} alt="dark" className="darkIconStr" /><label className="hidden" id="hiddenDark">Dark</label></div>
+      <div className="dragonAttribute">   <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  <label className="hidden" id="hiddenDragon">Dragon</label></div>
+       <div className="electricAttribute">  <img src={electricIcon} alt="electric" className="electricIconStr" /><label className="hidden" id="hiddenElectric">Electric</label> </div>
+       <div className="waterAttribute"> <img src={waterIcon} alt="water" className="waterIconStr" /><label className="hidden" id="hiddenWater">Water</label></div>
+    <div className="fairyAttribute">   <img src={fairyIcon} alt="fairy" className="fairyIconStr" /><label className="hidden" id="hiddenFairy">Fairy</label></div>
+      <div className="fightingAttribute">  <img src={fightingIcon} alt="fighting" className="fightingIconStr"/><label className="hidden" id="hiddenFighting">Fighting</label> </div>
+      <div className="fireAttribute"> <img src={fireIcon} alt="fire" className="fireIconStr"/><label className="hidden" id="hiddenFire">Fire</label> </div>
+      <div className="flyingAttribute">  <img src={flyingIcon} alt="flying" className="flyingIconStr"/><label className="hidden" id="hiddenFlying">Flying</label></div>
+      <div className="grassAttribute"> <img src={grassIcon} alt="grass" className="grassIconStr"/> <label className="hidden" id="hiddenGrass">Grass</label></div>
+      <div className="ghostAttribute"> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <label className="hidden" id="hiddenGhost">Ghost</label></div>
+      <div className="groundAttribute"> <img src={groundIcon} alt="ground" className="groundIconStr" /><label className="hidden" id="hiddenGround">Ground</label></div>
+      <div className="iceAttribute">  <img src={iceIcon} alt="ice"  className="iceIconStr"/><label className="hidden" id="hiddenIce">Ice</label></div>
+      <div className="normalAttribute">  <img src={normalIcon} alt="normal" className="normalIconStr"/><label className="hidden" id="hiddenNormal">Normal</label></div>
+      <div className="poisonAttribute">  <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <label className="hidden" id="hiddenPoison">Poison</label></div>
+      <div className="psychicAttribute"> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/> <label className="hidden" id="hiddenPsychic">Psychic</label></div>
+      <div className="rockAttribute">  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/><label className="hidden" id="hiddenRock">Rock</label></div>
+    <div className="steelAttribute">    <img src={steelIcon} alt="steel" className="steelIconStr"/><label className="hidden" id="hiddenSteel">Steel</label></div>
   </div>
   </div>
   </div>

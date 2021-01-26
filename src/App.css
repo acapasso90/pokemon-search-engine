@@ -135,17 +135,27 @@ animation: button 0.5s;}
   color: #9c0101;}
 
   .weakness img, .strengths img {height: 50px;
-  display: none;}
+  display: none;
+margin-left: 3px;
+margin-right: 3px;}
 
 .poisonIcon:hover ~#hiddenPoison, .fireIcon:hover ~#hiddenFire, .steelIcon:hover ~#hiddenSteel, .electricIcon:hover ~#hiddenElectric,
-.flyingIcon:hover ~#hiddenFlying, .grassIcon:hover ~#hiddenGrass, .darkIcon:hover ~#hiddenDark, .rockIcon:hover ~#hiddenRock,
+.flyingIcon:hover ~#hiddenFlying, .grassIcon:hover ~#hiddenGrass, .darkIcon:hover ~#hiddenDark, .rockSymbol:hover ~#hiddenRock,
 .normaIcon:hover ~#hiddenNormal, .ghostIcon:hover ~#hiddenGhost, .groundIcon:hover ~#hiddenGround, .iceIcon:hover ~#hiddenIce,
 .fightingIcon:hover ~#hiddenFighting, .dragonIcon:hover ~#hiddenDragon, .bugIcon:hover ~#hiddenBug, .fairyIcon:hover ~#hiddenFairy,
-.psychicIcon:hover ~#hiddenPsychic, .waterIcon:hover ~#hiddenWater
+.psychicIcon:hover ~#hiddenPsychic, .waterIcon:hover ~#hiddenWater, .poisonIconStr:hover ~#hiddenPoison, .fireIconStr:hover ~#hiddenFire, .steelIconStr:hover ~#hiddenSteel, .electricIconStr:hover ~#hiddenElectric,
+.flyingIconStr:hover ~#hiddenFlying, .grassIconStr:hover ~#hiddenGrass, .darkIconStr:hover ~#hiddenDark, .rockSymbolStr:hover ~#hiddenRock,
+.normaIconStr:hover ~#hiddenNormal, .ghostIconStr:hover ~#hiddenGhost, .groundIconStr:hover ~#hiddenGround, .iceIconStr:hover ~#hiddenIce,
+.fightingIconStr:hover ~#hiddenFighting, .dragonIconStr:hover ~#hiddenDragon, .bugIconStr:hover ~#hiddenBug, .fairyIconStr:hover ~#hiddenFairy,
+.psychicIconStr:hover ~#hiddenPsychic, .waterIconStr:hover ~#hiddenWater
 {display: inherit;}
 
-.weakness label, .strengths label {position: absolute;
+.weakness label{position: absolute;
   bottom: -15%;
+}
+
+.strengths label {position: absolute;
+  bottom: 20%;
 }
 
   .weak2 {display: inherit!important;}
