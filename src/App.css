@@ -42,6 +42,7 @@ color: #ffffff;
 user-select: none;
 background-color: #e06464}
 
+.hidden {display: none;}
 
 
 .icon {
@@ -136,6 +137,16 @@ animation: button 0.5s;}
   .weakness img, .strengths img {height: 50px;
   display: none;}
 
+.poisonIcon:hover ~#hiddenPoison, .fireIcon:hover ~#hiddenFire, .steelIcon:hover ~#hiddenSteel, .electricIcon:hover ~#hiddenElectric,
+.flyingIcon:hover ~#hiddenFlying, .grassIcon:hover ~#hiddenGrass, .darkIcon:hover ~#hiddenDark, .rockIcon:hover ~#hiddenRock,
+.normaIcon:hover ~#hiddenNormal, .ghostIcon:hover ~#hiddenGhost, .groundIcon:hover ~#hiddenGround, .iceIcon:hover ~#hiddenIce,
+.fightingIcon:hover ~#hiddenFighting, .dragonIcon:hover ~#hiddenDragon, .bugIcon:hover ~#hiddenBug, .fairyIcon:hover ~#hiddenFairy,
+.psychicIcon:hover ~#hiddenPsychic, .waterIcon:hover ~#hiddenWater
+{display: inherit;}
+
+.weakness label, .strengths label {position: absolute;
+  bottom: -15%;
+}
 
   .weak2 {display: inherit!important;}
 
