@@ -89,6 +89,13 @@ font-size: 16pt;
 
 .nameTitle {text-transform: capitalize;}
 
+.pokeType {margin-right: 17%;
+position: relative;
+left: -18%;}
+
+#pokeNameRow {width: 50%;
+position: relative;
+right: -30%;}
 
 
 .right {float: right;}
@@ -128,12 +135,16 @@ animation: button 0.5s;}
   .weakness img {height: 50px;
   display: none;}
 
+  .weakness {position: relative;
+  right: 10%;}
+
   .weak2 {display: inherit!important;}
 
 @keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
 @media only screen and (max-width: 500px){
-
+form {position: relative;
+right: 10%;}
   .alcremieGif {width: 30%;}
 
 

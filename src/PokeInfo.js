@@ -327,81 +327,54 @@ let poison = document.querySelector(".poisonIcon");
 let flying = document.querySelector(".flyingIcon")
 let dark = document.querySelector(".darkIcon");
 let ghost = document.querySelector(".ghostIcon");
+let grass = document.querySelector(".grassIcon")
+let rock = document.querySelector(".rockSymbol");
 let steelIcon = document.querySelector(".steelIcon");
+let ground = document.querySelector(".groundIcon");
+let water = document.querySelector(".waterIcon");
+let electric = document.querySelector(".electricIcon");
 console.log(steelIcon)
 if (type === "fairy" || type2 === "fairy") {
     ghost.classList.remove("weak2"); dark.classList.remove("weak2"); bug.classList.remove("weak2"); flying.classList.remove("weak2"); fire.classList.remove("weak2");
-    ice.classList.remove("weak2");
+    ice.classList.remove("weak2"); rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
+    electric.classList.remove("weak2"); grass.classList.remove("weak2");
     steelIcon.classList.add("weak2");  poison.classList.add("weak2");}
 if (type === "ghost" || type2 === "ghost") {
     bug.classList.remove("weak2"); poison.classList.remove("weak2"); steelIcon.classList.remove("weak2"); flying.classList.remove("weak2"); fire.classList.remove("weak2");
-    ice.classList.remove("weak2");
+    ice.classList.remove("weak2"); rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
+    electric.classList.remove("weak2"); grass.classList.remove("weak2");
     ghost.classList.add("weak2"); dark.classList.add("weak2");}
 if (type === "psychic" || type2 === "psychic"){
     poison.classList.remove("weak2"); steelIcon.classList.remove("weak2"); flying.classList.remove("weak2"); fire.classList.remove("weak2");
-    ice.classList.remove("weak2");
-    dark.classList.add("weak2"); bug.classList.add("weak2"); ghost.classList.add("weak2");}
+    ice.classList.remove("weak2"); rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2"); 
+    electric.classList.remove("weak2"); grass.classList.remove("weak2");
+    dark.classList.add("weak2"); bug.classList.add("weak2"); ghost.classList.add("weak2");} 
 if (type === "grass" || type2 === "grass"){steelIcon.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2");
-ice.classList.add("weak2"); fire.classList.add("weak2"); poison.classList.add("weak2"); bug.classList.add("weak2"); flying.classList.add("weak2");
+rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
+electric.classList.remove("weak2"); grass.classList.remove("weak2");
+ice.classList.add("weak2"); fire.classList.add("weak2"); poison.classList.add("weak2"); bug.classList.add("weak2"); flying.classList.add("weak2");}
+if (type === "bug" || type2 === "bug"){
+    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2");     ice.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
+    bug.classList.remove("weak2"); poison.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2");
+    electric.classList.remove("weak2"); grass.classList.remove("weak2");
+    fire.classList.add("weak2"); flying.classList.add("weak2"); rock.classList.add("weak2") }
+if (type === "fire" || type2 === "fire"){
+    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2");     ice.classList.remove("weak2"); flying.classList.remove("weak2"); 
+    electric.classList.remove("weak2"); grass.classList.remove("weak2");
+    bug.classList.remove("weak2"); poison.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2"); fire.classList.remove("weak2");
+    ground.classList.add("weak2"); water.classList.add("weak2"); rock.classList.add("weak2") }
+if (type === "water" || type2 === "water"){
+    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2");     ice.classList.remove("weak2"); flying.classList.remove("weak2"); 
+    bug.classList.remove("weak2"); poison.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2"); fire.classList.remove("weak2");
+    ground.classList.remove("weak2"); water.classList.remove("weak2"); rock.classList.remove("weak2")
+electric.classList.add("weak2"); grass.classList.add("weak2");
+}
 }
 
-}
-
-if (shinyIcon !== null && abilityList.length <= 1 && type2 != null ){
+if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
     return(<div className="pokeInfo">
-        <h3 className="nameTitle">{pokename}</h3>
-        <p>{type} / {type2} </p>
-        <p>Weak Against</p>
-        <div className="weakness">
-        <div className="row">
-    <img src={bugIcon} alt="bug" className="bugIcon" /> <img src={darkIcon} alt="dark" className="darkIcon" /> <img src={dragonIcon} alt="dragon" className="dragonIcon" />  
-    <img src={electricIcon} alt="electric" className="electricIcon" /> <img src={waterIcon} alt="water" className="waterIcon" />
-      <img src={fairyIcon} alt="fairy" className="fairyIcon" /> <img src={fightingIcon} alt="fighting" className="fightingIcon"/> <img src={fireIcon} alt="fire" className="fireIcon"/> <img src={flyingIcon} alt="flying" className="flyingIcon"/>
-      <img src={grassIcon} alt="grass" className="grassIcon"/> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <img src={groundIcon} alt="ground" className="groundIcon" /> <img src={iceIcon} alt="ice"  className="iceIcon"/>
-    <img src={normalIcon} alt="normal" className="normalIcon"/> <img src={poisonIcon} alt="poison" className="poisonIcon" /> <img src={psychicIcon} alt="psychic" className="psychicIcon"/>  <img src={rockSymbol} alt="rock" className="rockSymbol"/>
-    <img src={steelIcon} alt="steel" className="steelIcon" />
-  </div>
-  </div>
-    <img src={pokePicture} className="officialImg" alt="officialArtwork" />
-    <div className="right">
-        <div className="column">
-            <h3>Base Stats</h3>
-            <p> <b>{stat1name} </b>: {stat1} </p> 
-      <p><b> {stat2name}</b> : {stat2} </p>
-      <p> <b> {stat3name}</b> : {stat3} </p>
-      <p><b>{stat4name}</b>: {stat4} </p>
-      <p><b>{stat5name}</b> : {stat5} </p>
-      <p><b>{stat6name}</b> : {stat6} </p>
-        </div>
-    </div>
-    <EvolutionInfo data={pokeInfo} />
-    <div className="row">
-    <div className="card"> 
-    <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
-    Ability: {ability1}  
-  </div>
-    <div className="card" id="card2">
-    <h3 className="pokeName">Shiny {pokename}</h3>
-    <img src={shinyIcon} className="icon" alt="shiny" /> 
- Ability: {ability1}
-</div></div>
-    </div>    )}
-
-    else if (abilityList.length > 1 ) {return(<div className="pokeInfo">
-                   <h3 className="nameTitle">{pokename}</h3>
-                   <p>{type}</p>
-                   <p>Weak Against</p>
-                   <div className="weakness">
-        <div className="row">
-    <img src={bugIcon} alt="bug" className="bugIcon" /> <img src={darkIcon} alt="dark" className="darkIcon" /> <img src={dragonIcon} alt="dragon" className="dragonIcon" />  
-    <img src={electricIcon} alt="electric" className="electricIcon" /> <img src={waterIcon} alt="water" className="waterIcon" />
-      <img src={fairyIcon} alt="fairy" className="fairyIcon" /> <img src={fightingIcon} alt="fighting" className="fightingIcon"/> <img src={fireIcon} alt="fire" className="fireIcon"/> <img src={flyingIcon} alt="flying" className="flyingIcon"/>
-      <img src={grassIcon} alt="grass" className="grassIcon"/> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <img src={groundIcon} alt="ground" className="groundIcon" /> <img src={iceIcon} alt="ice"  className="iceIcon"/>
-    <img src={normalIcon} alt="normal" className="normalIcon"/> <img src={poisonIcon} alt="poison" className="poisonIcon" /> <img src={psychicIcon} alt="psychic" className="psychicIcon"/>  <img src={rockSymbol} alt="rock" className="rockSymbol"/>
-    <img src={steelIcon} alt="steel" className="steelIcon"/>
-  </div>
-  </div>
-    <img src={pokePicture} className="officialImg" alt="officialArtwork" />
+             <h3 className="nameTitle">{pokename}</h3>
+         <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column">
         <h3>Base Stats</h3>
@@ -413,6 +386,119 @@ if (shinyIcon !== null && abilityList.length <= 1 && type2 != null ){
       <p><b>{stat6name}</b> : {stat6} </p>
         </div>
     </div>
+        <div className="row" id="pokeNameRow">
+        <div className="pokeType">
+        <h3 className="nameTitle">{pokename}</h3>
+        <p>{type} / {type2} </p>
+        </div>
+        <div className="right">
+        <div className="weakness">
+        <p>Weak Against</p>
+        <div className="row">
+    <img src={bugIcon} alt="bug" className="bugIcon" /> <img src={darkIcon} alt="dark" className="darkIcon" /> <img src={dragonIcon} alt="dragon" className="dragonIcon" />  
+    <img src={electricIcon} alt="electric" className="electricIcon" /> <img src={waterIcon} alt="water" className="waterIcon" />
+      <img src={fairyIcon} alt="fairy" className="fairyIcon" /> <img src={fightingIcon} alt="fighting" className="fightingIcon"/> <img src={fireIcon} alt="fire" className="fireIcon"/> <img src={flyingIcon} alt="flying" className="flyingIcon"/>
+      <img src={grassIcon} alt="grass" className="grassIcon"/> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <img src={groundIcon} alt="ground" className="groundIcon" /> <img src={iceIcon} alt="ice"  className="iceIcon"/>
+    <img src={normalIcon} alt="normal" className="normalIcon"/> <img src={poisonIcon} alt="poison" className="poisonIcon" /> <img src={psychicIcon} alt="psychic" className="psychicIcon"/>  <img src={rockSymbol} alt="rock" className="rockSymbol"/>
+    <img src={steelIcon} alt="steel" className="steelIcon"/>
+  </div>
+  </div>
+  </div>
+  </div>
+    <EvolutionInfo data={pokeInfo} />
+    <div className="row">
+    <div className="card"> 
+    <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
+    Ability: {ability1}
+  </div>
+    <div className="card" id="card2">
+    <h3 className="pokeName">Shiny {pokename}</h3>
+    <img src={shinyIcon} className="icon" alt="shiny" /> 
+ Ability: {ability1}
+</div></div>
+    </div>    )}
+
+
+else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {return(<div className="pokeInfo">
+         <h3 className="nameTitle">{pokename}</h3>
+         <img src={pokePicture} className="officialImg" alt="officialArtwork" />
+    <div className="right">
+        <div className="column">
+        <h3>Base Stats</h3>
+        <p> <b>{stat1name} </b>: {stat1} </p> 
+      <p><b> {stat2name}</b> : {stat2} </p>
+      <p> <b> {stat3name}</b> : {stat3} </p>
+      <p><b>{stat4name}</b>: {stat4} </p>
+      <p><b>{stat5name}</b> : {stat5} </p>
+      <p><b>{stat6name}</b> : {stat6} </p>
+        </div>
+    </div>
+      <div className="row" id="pokeNameRow">
+      <div className="pokeType">
+        <h3 className="nameTitle">{pokename}</h3>
+        <p>{type} / {type2} </p>
+        </div>
+        <div className="right">
+        <div className="weakness">
+        <p>Weak Against</p>
+        <div className="row">
+    <img src={bugIcon} alt="bug" className="bugIcon" /> <img src={darkIcon} alt="dark" className="darkIcon" /> <img src={dragonIcon} alt="dragon" className="dragonIcon" />  
+    <img src={electricIcon} alt="electric" className="electricIcon" /> <img src={waterIcon} alt="water" className="waterIcon" />
+      <img src={fairyIcon} alt="fairy" className="fairyIcon" /> <img src={fightingIcon} alt="fighting" className="fightingIcon"/> <img src={fireIcon} alt="fire" className="fireIcon"/> <img src={flyingIcon} alt="flying" className="flyingIcon"/>
+      <img src={grassIcon} alt="grass" className="grassIcon"/> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <img src={groundIcon} alt="ground" className="groundIcon" /> <img src={iceIcon} alt="ice"  className="iceIcon"/>
+    <img src={normalIcon} alt="normal" className="normalIcon"/> <img src={poisonIcon} alt="poison" className="poisonIcon" /> <img src={psychicIcon} alt="psychic" className="psychicIcon"/>  <img src={rockSymbol} alt="rock" className="rockSymbol"/>
+    <img src={steelIcon} alt="steel" className="steelIcon"/>
+  </div>
+  </div>
+  </div>
+  </div>
+<EvolutionInfo data={pokeInfo} />
+<div className="row">
+<div className="card"> 
+<h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
+Ability: {ability1}  
+Ability: {ability2}
+</div>
+<div className="card" id="card2">
+<h3 className="pokeName">Shiny {pokename}</h3>
+<img src={shinyIcon} className="icon" alt="shiny" /> 
+Ability: {ability1}
+Ability: {ability2}
+</div></div>
+</div> )}
+
+    else if (abilityList.length > 1 ) {return(<div className="pokeInfo">
+          <h3 className="nameTitle">{pokename}</h3>
+         <img src={pokePicture} className="officialImg" alt="officialArtwork" />
+    <div className="right">
+        <div className="column">
+        <h3>Base Stats</h3>
+        <p> <b>{stat1name} </b>: {stat1} </p> 
+      <p><b> {stat2name}</b> : {stat2} </p>
+      <p> <b> {stat3name}</b> : {stat3} </p>
+      <p><b>{stat4name}</b>: {stat4} </p>
+      <p><b>{stat5name}</b> : {stat5} </p>
+      <p><b>{stat6name}</b> : {stat6} </p>
+        </div>
+    </div>
+                <div className="row" id="pokeNameRow">
+            <div className="pokeType">
+        <p>{type} </p>
+        </div>
+        <div className="right">
+        <div className="weakness">
+        <p>Weak Against</p>
+        <div className="row">
+    <img src={bugIcon} alt="bug" className="bugIcon" /> <img src={darkIcon} alt="dark" className="darkIcon" /> <img src={dragonIcon} alt="dragon" className="dragonIcon" />  
+    <img src={electricIcon} alt="electric" className="electricIcon" /> <img src={waterIcon} alt="water" className="waterIcon" />
+      <img src={fairyIcon} alt="fairy" className="fairyIcon" /> <img src={fightingIcon} alt="fighting" className="fightingIcon"/> <img src={fireIcon} alt="fire" className="fireIcon"/> <img src={flyingIcon} alt="flying" className="flyingIcon"/>
+      <img src={grassIcon} alt="grass" className="grassIcon"/> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <img src={groundIcon} alt="ground" className="groundIcon" /> <img src={iceIcon} alt="ice"  className="iceIcon"/>
+    <img src={normalIcon} alt="normal" className="normalIcon"/> <img src={poisonIcon} alt="poison" className="poisonIcon" /> <img src={psychicIcon} alt="psychic" className="psychicIcon"/>  <img src={rockSymbol} alt="rock" className="rockSymbol"/>
+    <img src={steelIcon} alt="steel" className="steelIcon"/>
+  </div>
+  </div>
+  </div>
+  </div>
     <EvolutionInfo data={pokeInfo} />
     <div className="row">
     <div className="card"> 
@@ -433,10 +519,15 @@ if (shinyIcon !== null && abilityList.length <= 1 && type2 != null ){
 
 
 else { return(<div className="pokeInfo">
+      <div className="row">
+          <div className="column">
         <h3 className="nameTitle">{pokename}</h3>
         <p>{type} / {type2} </p>
-        <p>Weak Against</p>
+        </div>
+        <div className="right">
+        <div className="column">
         <div className="weakness">
+        <p>Weak Against</p>
         <div className="row">
     <img src={bugIcon} alt="bug" className="bugIcon" /> <img src={darkIcon} alt="dark" className="darkIcon" /> <img src={dragonIcon} alt="dragon" className="dragonIcon" />  
     <img src={electricIcon} alt="electric" className="electricIcon" /> <img src={waterIcon} alt="water" className="waterIcon" />
@@ -444,6 +535,9 @@ else { return(<div className="pokeInfo">
       <img src={grassIcon} alt="grass" className="grassIcon"/> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <img src={groundIcon} alt="ground" className="groundIcon" /> <img src={iceIcon} alt="ice"  className="iceIcon"/>
     <img src={normalIcon} alt="normal" className="normalIcon"/> <img src={poisonIcon} alt="poison" className="poisonIcon" /> <img src={psychicIcon} alt="psychic" className="psychicIcon"/>  <img src={rockSymbol} alt="rock" className="rockSymbol"/>
     <img src={steelIcon} alt="steel" className="steelIcon"/>
+  </div>
+  </div>
+  </div>
   </div>
   </div>
 <img src={pokePicture} className="officialImg" alt="officialArtwork" />
