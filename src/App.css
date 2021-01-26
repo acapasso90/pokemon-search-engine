@@ -7,9 +7,10 @@ color: #610202;}
 
 body {font-size: 18pt;}
 
-
 ::selection {background-color: #9c0101;
 color: #e7d6d6;}
+
+#stats p {text-transform: lowercase;}
 .App {
   text-align: center;
 }
@@ -132,11 +133,9 @@ animation: button 0.5s;}
 .submitButton:hover {background-color: #e7d6d6;
   color: #9c0101;}
 
-  .weakness img {height: 50px;
+  .weakness img, .strengths img {height: 50px;
   display: none;}
 
-  .weakness {position: relative;
-  right: 10%;}
 
   .weak2 {display: inherit!important;}
 
