@@ -46,6 +46,32 @@ let stat6name = props.data.stats[5].stat.name;
 let stat6 = props.data.stats[5].base_stat;
 let evolutionURL = props.data.species.url;
 const [pokeInfo, setPokeInfo] = useState("");
+let bug = document.querySelector(".bugIcon");
+let fire = document.querySelector(".fireIcon");
+let ice = document.querySelector(".iceIcon");
+let steel = document.querySelector(".steelIcon");
+let poison = document.querySelector(".poisonIcon");
+let flying = document.querySelector(".flyingIcon");
+let fairy = document.querySelector(".fairyIcon");
+let dark = document.querySelector(".darkIcon");
+let ghost = document.querySelector(".ghostIcon");
+let fighting = document.querySelector(".fightingIcon");
+let psychic = document.querySelector(".psychicIcon");
+let grass = document.querySelector(".grassIcon")
+let rock = document.querySelector(".rockSymbol");
+let normal = document.querySelector(".normalIcon");
+let dragon = document.querySelector(".dragonIcon");
+let ground = document.querySelector(".groundIcon");
+let water = document.querySelector(".waterIcon");
+let electric = document.querySelector(".electricIcon");
+let type = props.data.types[0].type.name;
+let type2 = null;
+if (props.data.types.length > 1){type2 = props.data.types[1].type.name;}
+console.log(type2);
+let pokename = (props.data.forms[0].name);
+
+let card = document.querySelector('.card');
+let shinyCard = document.getElementById('card2');
 
 function showEvolutionExtendedInfo(response){
     setPokeInfo(response.data);}
@@ -69,16 +95,16 @@ useEffect(() => {
       cancelTokenSource.cancel();
   }}, [evolutionURL]);
 
-
-let type = props.data.types[0].type.name;
-let type2 = null;
-if (props.data.types.length > 1){type2 = props.data.types[1].type.name;}
-let pokename = (props.data.forms[0].name);
-
-let card = document.querySelector('.card');
-let shinyCard = document.getElementById('card2');
-if(loaded === "loaded"){
-if (type === "water") {card.classList.remove('steel'); card.classList.remove('psychic');
+  useEffect(() => {
+    if(loaded === "loaded"){
+        //  removes pre-existing classLists from typeIcons 
+    poison.classList.remove("weak2"); steel.classList.remove("weak2"); ice.classList.remove("weak2");  flying.classList.remove("weak2"); 
+    ghost.classList.remove("weak2"); dark.classList.remove("weak2"); fire.classList.remove("weak2"); dragon.classList.remove("weak2");
+    ground.classList.remove("weak2"); water.classList.remove("weak2"); rock.classList.remove("weak2"); electric.classList.remove("weak2"); grass.classList.remove("weak2");
+    fairy.classList.remove("weak2"); bug.classList.remove("weak2"); fighting.classList.remove("weak2"); psychic.classList.remove("weak2");
+    normal.classList.remove("weak2");
+//  removes pre-existing classLists from cards and ShinyCards 
+    card.classList.remove('steel'); card.classList.remove('psychic'); card.classList.remove('water');
 card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
 card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('bug');
 card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
@@ -89,287 +115,48 @@ shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shiny
 shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
 shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
 shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('water'); shinyCard.classList.add('water');} 
-
-    else if (type === "bug"){card.classList.remove('steel'); card.classList.remove('psychic');
-    card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-    card.classList.remove('grass'); card.classList.remove('ghost');
-    card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-    card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
-    card.classList.remove('darkness'); card.classList.remove('fighting');
-    shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); 
-    shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
-    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-    shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-        card.classList.add('bug'); shinyCard.classList.add('bug');} 
-
-    else if (type === "ground") {card.classList.remove('steel'); card.classList.remove('psychic');
-    card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-    card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('water');
-    card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-    card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-    card.classList.remove('darkness'); card.classList.remove('fighting');
-    shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
-    shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('water');
-    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-    shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-        card.classList.add('ground'); shinyCard.classList.add('ground');} 
-
-    else if (type === "steel") {card.classList.remove('water'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('ground');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('water'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('steel'); shinyCard.classList.add('steel');}
-
-    else if (type === "normal" || type === "flying"){card.classList.remove('water'); card.classList.remove('psychic');
-    card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
-    card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
-    card.classList.remove('steel'); card.classList.remove('fairy'); card.classList.remove('rock');
-    card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('poison');
-    card.classList.remove('darkness'); card.classList.remove('fighting');
-    shinyCard.classList.remove('water'); shinyCard.classList.remove('psychic');
-    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('ground');
-    shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost');  shinyCard.classList.remove('steel');
-    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('bug');
-    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-    shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-        card.classList.add('normal'); shinyCard.classList.add('normal');}
-
-    else if (type === "psychic") {
-    card.classList.remove('steel'); card.classList.remove('water');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('water');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('bug');
-    card.classList.add('psychic'); shinyCard.classList.add('psychic');}
-
-    else if (type === "poison"){card.classList.remove('steel'); card.classList.remove('psychic');
-    card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('water');
-    card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('bug');
-    card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-    card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
-    card.classList.remove('darkness'); card.classList.remove('fighting'); 
-    shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-    shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-    shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
-    shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-    shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon');  shinyCard.classList.remove('bug');
-    shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('water');
-        card.classList.add('poison'); shinyCard.classList.add('poison');} 
-
-else if (type === "electric") {    card.classList.remove('steel'); card.classList.remove('water');
-card.classList.remove('psychic'); card.classList.remove('ice'); card.classList.remove('bug');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('poison');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('water');
-shinyCard.classList.remove('psychic'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('electric'); shinyCard.classList.add('electric');}
-
-else if (type === "ice") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('water');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
-card.classList.remove('darkness'); card.classList.remove('fighting'); card.classList.remove('bug');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('water');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('bug');
-    card.classList.add('ice'); shinyCard.classList.add('ice');}
-
-else if (type === "grass") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('water'); card.classList.remove('ghost'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('water'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('bug');
-    card.classList.add('grass'); shinyCard.classList.add('grass');
-    }
+shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');    shinyCard.classList.remove('water');
+// adds Weak to Icons dependant on type1 and type 2 if applicable 
+    if (type === "fairy" || type2 === "fairy") {steel.classList.add("weak2");  poison.classList.add("weak2");}
+    if (type === "ghost" || type2 === "ghost") {ghost.classList.add("weak2"); dark.classList.add("weak2");}
+     if (type === "psychic" || type2 === "psychic"){dark.classList.add("weak2"); bug.classList.add("weak2"); ghost.classList.add("weak2");} 
+    if (type === "grass" || type2 === "grass"){ice.classList.add("weak2"); fire.classList.add("weak2"); poison.classList.add("weak2"); bug.classList.add("weak2"); flying.classList.add("weak2");}
+    if (type === "bug" || type2 === "bug"){fire.classList.add("weak2"); flying.classList.add("weak2"); rock.classList.add("weak2"); }
+    if (type === "fire" || type2 === "fire"){ ground.classList.add("weak2"); water.classList.add("weak2"); rock.classList.add("weak2");}
+    if (type === "water" || type2 === "water"){electric.classList.add("weak2"); grass.classList.add("weak2");}
+    if (type === "dark" || type2 === "dark") {fairy.classList.add("weak2"); bug.classList.add("weak2"); fighting.classList.add("weak2");}
+    if (type === "dragon" || type2 === "dragon"){dragon.classList.add("weak2"); fairy.classList.add("weak2"); ice.classList.add("weak2");}
+    if (type === "electric" || type2 === "electric"){ground.classList.add("weak2");}
+    if (type === "fighting" || type2 === "fighting"){flying.classList.add("weak2"); fairy.classList.add("weak2"); psychic.classList.add("weak2");}
+    if (type === "flying" || type2 === "flying"){rock.classList.add("weak2"); electric.classList.add("weak2"); ice.classList.add("weak2"); }
+    if (type === "ground" || type2 === "ground"){ water.classList.add("weak2"); grass.classList.add("weak2"); ice.classList.add("weak2");}
+    if (type === "ice" || type2 === "ice"){fighting.classList.add("weak2"); rock.classList.add("weak2"); steel.classList.add("weak2"); fire.classList.add("weak2");}
+    if (type === "normal" || type2 === "normal"){ fighting.classList.add("weak2"); }
+    if (type === "poison" || type2 === "poison"){ground.classList.add("weak2"); psychic.classList.add("weak2");}
+    if (type === "rock" || type2 === "rock"){fighting.classList.add("weak2"); ground.classList.add("weak2"); steel.classList.add("weak2"); water.classList.add("weak2"); grass.classList.add("weak2");}
+    if (type === "steel" || type2 === "steel"){fighting.classList.add("weak2"); ground.classList.add("weak2"); fire.classList.add("weak2");}
+// adds Card styling based on type
+if (type === "water") {card.classList.add('water'); shinyCard.classList.add('water');} 
+    else if (type === "bug"){card.classList.add('bug'); shinyCard.classList.add('bug');} 
+    else if (type === "ground") {card.classList.add('ground'); shinyCard.classList.add('ground');} 
+    else if (type === "steel") { card.classList.add('steel'); shinyCard.classList.add('steel');}
+    else if (type === "normal" || type === "flying"){card.classList.add('normal'); shinyCard.classList.add('normal');}
+    else if (type === "psychic") {  card.classList.add('psychic'); shinyCard.classList.add('psychic');}
+    else if (type === "poison"){ card.classList.add('poison'); shinyCard.classList.add('poison');} 
+else if (type === "electric") {card.classList.add('electric'); shinyCard.classList.add('electric');}
+else if (type === "ice") {card.classList.add('ice'); shinyCard.classList.add('ice');}
+else if (type === "grass") {card.classList.add('grass'); shinyCard.classList.add('grass'); }
+else if (type === "ghost") {card.classList.add('ghost'); shinyCard.classList.add('ghost');}
+else if (type === "fire") {card.classList.add('fire'); shinyCard.classList.add('fire');   }
+else if (type === "fairy") {card.classList.add('fairy'); shinyCard.classList.add('fairy');}
+else if (type === "rock") {card.classList.add('rock'); shinyCard.classList.add('rock'); }
+else if (type === "dragon") {card.classList.add('dragon'); shinyCard.classList.add('dragon');}
+else if (type === "dark"){ card.classList.add('darkness'); shinyCard.classList.add('darkness');} 
+else {card.classList.add('fighting'); shinyCard.classList.add('fighting');}
+}}
+, [type, type2]);
 
 
-else if (type === "ghost") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('water'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('water'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('ghost'); shinyCard.classList.add('ghost');}
-
-else if (type === "fire") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('water'); card.classList.remove('dragon'); card.classList.remove('ground');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('water'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('normal');
-    card.classList.add('fire'); shinyCard.classList.add('fire');
-    }
-
-else if (type === "fairy") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('bug');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('poison');
-card.classList.remove('water'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('ground');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('water'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('fairy'); shinyCard.classList.add('fairy');}
-
-else if (type === "rock") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('normal');
-card.classList.remove('fairy'); card.classList.remove('water'); card.classList.remove('ground');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('water'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('rock'); shinyCard.classList.add('rock');
-    }
-else if (type === "dragon") {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('water'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('water'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('fighting');
-    card.classList.add('dragon'); shinyCard.classList.add('dragon');}
-
-else if (type === "dark"){card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('water'); card.classList.remove('fighting');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('bug');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('water'); shinyCard.classList.remove('fighting'); shinyCard.classList.remove('poison');
-    card.classList.add('darkness'); shinyCard.classList.add('darkness');} 
-
-else {card.classList.remove('steel'); card.classList.remove('psychic');
-card.classList.remove('electric'); card.classList.remove('ice'); card.classList.remove('poison');
-card.classList.remove('grass'); card.classList.remove('ghost'); card.classList.remove('ground');
-card.classList.remove('fairy'); card.classList.remove('rock'); card.classList.remove('normal');
-card.classList.remove('fire'); card.classList.remove('dragon'); card.classList.remove('bug');
-card.classList.remove('darkness'); card.classList.remove('water');
-shinyCard.classList.remove('steel'); shinyCard.classList.remove('psychic');
-shinyCard.classList.remove('electric'); shinyCard.classList.remove('ice');
-shinyCard.classList.remove('grass'); shinyCard.classList.remove('ghost'); shinyCard.classList.remove('poison');
-shinyCard.classList.remove('fairy'); shinyCard.classList.remove('rock'); shinyCard.classList.remove('ground');
-shinyCard.classList.remove('fire'); shinyCard.classList.remove('dragon'); shinyCard.classList.remove('normal');
-shinyCard.classList.remove('darkness'); shinyCard.classList.remove('water'); shinyCard.classList.remove('bug');
-    card.classList.add('fighting'); shinyCard.classList.add('fighting');
-}
-let bug = document.querySelector(".bugIcon");
-let fire = document.querySelector(".fireIcon");
-let ice = document.querySelector(".iceIcon");
-let poison = document.querySelector(".poisonIcon");
-let flying = document.querySelector(".flyingIcon")
-let dark = document.querySelector(".darkIcon");
-let ghost = document.querySelector(".ghostIcon");
-let grass = document.querySelector(".grassIcon")
-let rock = document.querySelector(".rockSymbol");
-let steelIcon = document.querySelector(".steelIcon");
-let ground = document.querySelector(".groundIcon");
-let water = document.querySelector(".waterIcon");
-let electric = document.querySelector(".electricIcon");
-console.log(steelIcon)
-if (type === "fairy" || type2 === "fairy") {
-    ghost.classList.remove("weak2"); dark.classList.remove("weak2"); bug.classList.remove("weak2"); flying.classList.remove("weak2"); fire.classList.remove("weak2");
-    ice.classList.remove("weak2"); rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
-    electric.classList.remove("weak2"); grass.classList.remove("weak2");
-    steelIcon.classList.add("weak2");  poison.classList.add("weak2");}
-if (type === "ghost" || type2 === "ghost") {
-    bug.classList.remove("weak2"); poison.classList.remove("weak2"); steelIcon.classList.remove("weak2"); flying.classList.remove("weak2"); fire.classList.remove("weak2");
-    ice.classList.remove("weak2"); rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
-    electric.classList.remove("weak2"); grass.classList.remove("weak2");
-    ghost.classList.add("weak2"); dark.classList.add("weak2");}
-if (type === "psychic" || type2 === "psychic"){
-    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2"); flying.classList.remove("weak2"); fire.classList.remove("weak2");
-    ice.classList.remove("weak2"); rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2"); 
-    electric.classList.remove("weak2"); grass.classList.remove("weak2");
-    dark.classList.add("weak2"); bug.classList.add("weak2"); ghost.classList.add("weak2");} 
-if (type === "grass" || type2 === "grass"){steelIcon.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2");
-rock.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
-electric.classList.remove("weak2"); grass.classList.remove("weak2");
-ice.classList.add("weak2"); fire.classList.add("weak2"); poison.classList.add("weak2"); bug.classList.add("weak2"); flying.classList.add("weak2");}
-if (type === "bug" || type2 === "bug"){
-    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2");     ice.classList.remove("weak2"); water.classList.remove("weak2"); ground.classList.remove("weak2");
-    bug.classList.remove("weak2"); poison.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2");
-    electric.classList.remove("weak2"); grass.classList.remove("weak2");
-    fire.classList.add("weak2"); flying.classList.add("weak2"); rock.classList.add("weak2") }
-if (type === "fire" || type2 === "fire"){
-    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2");     ice.classList.remove("weak2"); flying.classList.remove("weak2"); 
-    electric.classList.remove("weak2"); grass.classList.remove("weak2");
-    bug.classList.remove("weak2"); poison.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2"); fire.classList.remove("weak2");
-    ground.classList.add("weak2"); water.classList.add("weak2"); rock.classList.add("weak2") }
-if (type === "water" || type2 === "water"){
-    poison.classList.remove("weak2"); steelIcon.classList.remove("weak2");     ice.classList.remove("weak2"); flying.classList.remove("weak2"); 
-    bug.classList.remove("weak2"); poison.classList.remove("weak2");  ghost.classList.remove("weak2"); dark.classList.remove("weak2"); fire.classList.remove("weak2");
-    ground.classList.remove("weak2"); water.classList.remove("weak2"); rock.classList.remove("weak2")
-electric.classList.add("weak2"); grass.classList.add("weak2");
-}
-}
 
 if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
     return(<div className="pokeInfo">
