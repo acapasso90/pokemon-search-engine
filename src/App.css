@@ -23,8 +23,8 @@ color: #e7d6d6;}
   margin-top: 50px;
 min-height: 414px;
 width: 18.4%;
-margin-left:  50px;
-margin-right: 50px;
+margin-left:  100px;
+margin-right: 100px;
 border-radius: 5%;
 }
 
@@ -95,10 +95,6 @@ font-size: 16pt;
 position: relative;
 left: -18%;}
 
-#pokeNameRow {width: 50%;
-position: relative;
-right: -30%;}
-
 
 .right {float: right;}
 
@@ -155,7 +151,7 @@ margin-right: 3px;}
 }
 
 .strengths label {position: absolute;
-  bottom: 20%;
+  bottom: -44.5%;
 }
 
   .weak2 {display: inherit!important;}
