@@ -3,11 +3,12 @@ import axios from "axios";
 import ExtendedCards from "./ExtendedCards.js";
 
 export default function ExtendedPokeInfo(props){
+
+    let url = props.data;
     const [pokeinfo, Setpokeinfo] = useState("");
     const cancelTokenSource = axios.CancelToken.source();
 
 function showExtendedInfo(response){
-    console.log(response.data);
     const official = "official-artwork";
     if (response.data.types.length > 1) {
     Setpokeinfo({
@@ -26,16 +27,19 @@ function showExtendedInfo(response){
         loaded: "loaded",
     })}
     }
-let url = props.data;
-    useEffect(() => {
-        let mounted = true;
-        if (mounted) {axios.get(url, {
-            cancelToken: cancelTokenSource.token
-          }).then(showExtendedInfo);}
-        return function cleanup() {
-          mounted = false
-          cancelTokenSource.cancel();
-      }}, []);
+
+useEffect(() => {
+    let mounted = true;
+    if (mounted) {axios.get(url, {
+        cancelToken: cancelTokenSource.token
+      }).then(showExtendedInfo);}
+    return function cleanup() {
+      mounted = false
+      cancelTokenSource.cancel();
+  }}, [props.data]);
+
+
+
 
       return(<div className="extendedCards">
           <ExtendedCards data={pokeinfo} />
