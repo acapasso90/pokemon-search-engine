@@ -26,34 +26,34 @@ let pokePicture = props.data.pokePicture;
 let shinyIcon =  props.data.shinySprite;
 let loaded = props.data.loaded;
 let bug = document.querySelectorAll(".bugIcon");
-let fire = document.querySelector(".fireIcon");
+let fire = document.querySelectorAll(".fireIcon");
 let ice = document.querySelectorAll(".iceIcon");
 let steel = document.querySelectorAll(".steelIcon");
 let poison = document.querySelectorAll(".poisonIcon");
-let flying = document.querySelector(".flyingIcon");
-let fairy = document.querySelector(".fairyIcon");
-let dark = document.querySelector(".darkIcon");
-let ghost = document.querySelector(".ghostIcon");
-let fighting = document.querySelector(".fightingIcon");
-let psychic = document.querySelector(".psychicIcon");
-let grass = document.querySelector(".grassIcon")
-let rock = document.querySelector(".rockSymbol");
-let normal = document.querySelector(".normalIcon");
-let dragon = document.querySelector(".dragonIcon");
-let ground = document.querySelector(".groundIcon");
-let water = document.querySelector(".waterIcon");
-let electric = document.querySelector(".electricIcon");
-let bug2 = document.querySelector(".bugIconStr");
-let fire2 = document.querySelector(".fireIconStr");
-let ice2 = document.querySelector(".iceIconStr");
-let steel2 = document.querySelector(".steelIconStr");
-let poison2 = document.querySelector(".poisonIconStr");
-let flying2 = document.querySelector(".flyingIconStr");
-let fairy2 = document.querySelector(".fairyIconStr");
-let dark2 = document.querySelector(".darkIconStr");
-let ghost2 = document.querySelector(".ghostIconStr");
-let fighting2 = document.querySelector(".fightingIconStr");
-let psychic2 = document.querySelector(".psychicIconStr");
+let flying = document.querySelectorAll(".flyingIcon");
+let fairy = document.querySelectorAll(".fairyIcon");
+let dark = document.querySelectorAll(".darkIcon");
+let ghost = document.querySelectorAll(".ghostIcon");
+let fighting = document.querySelectorAll(".fightingIcon");
+let psychic = document.querySelectorAll(".psychicIcon");
+let grass = document.querySelectorAll(".grassIcon")
+let rock = document.querySelectorAll(".rockSymbol");
+let normal = document.querySelectorAll(".normalIcon");
+let dragon = document.querySelectorAll(".dragonIcon");
+let ground = document.querySelectorAll(".groundIcon");
+let water = document.querySelectorAll(".waterIcon");
+let electric = document.querySelectorAll(".electricIcon");
+let bug2 = document.querySelectorAll(".bugIconStr");
+let fire2 = document.querySelectorAll(".fireIconStr");
+let ice2 = document.querySelectorAll(".iceIconStr");
+let steel2 = document.querySelectorAll(".steelIconStr");
+let poison2 = document.querySelectorAll(".poisonIconStr");
+let flying2 = document.querySelectorAll(".flyingIconStr");
+let fairy2 = document.querySelectorAll(".fairyIconStr");
+let dark2 = document.querySelectorAll(".darkIconStr");
+let ghost2 = document.querySelectorAll(".ghostIconStr");
+let fighting2 = document.querySelectorAll(".fightingIconStr");
+let psychic2 = document.querySelectorAll(".psychicIconStr");
 let grass2 = document.querySelector(".grassIconStr")
 let rock2 = document.querySelector(".rockSymbolStr");
 let normal2 = document.querySelector(".normalIconStr");
@@ -65,59 +65,59 @@ let electric2 = document.querySelector(".electricIconStr");
 useEffect(() => {
     if(loaded === "loaded"){
         //  removes pre-existing classLists from typeIcons in Weak Against
-    poison.forEach(poison => poison.classList.remove("weak2")); steel.forEach(steel => steel.classList.remove("weak2")); ice.forEach(ice => ice.classList.remove("weak2"));  flying.classList.remove("weak2"); 
-    ghost.classList.remove("weak2"); dark.classList.remove("weak2"); fire.classList.remove("weak2"); dragon.classList.remove("weak2");
-    ground.classList.remove("weak2"); water.classList.remove("weak2"); rock.classList.remove("weak2"); electric.classList.remove("weak2"); grass.classList.remove("weak2");
-    fairy.classList.remove("weak2");  bug.forEach(bug => bug.classList.remove("weak2")); fighting.classList.remove("weak2"); psychic.classList.remove("weak2");
-    normal.classList.remove("weak2");
+    poison.forEach(poison => poison.classList.remove("weak2")); steel.forEach(steel => steel.classList.remove("weak2")); ice.forEach(ice => ice.classList.remove("weak2")); flying.forEach(flying => flying.classList.remove("weak2")); 
+    ghost.forEach(ghost => ghost.classList.remove("weak2"));  dark.forEach(dark => dark.classList.remove("weak2")); fire.forEach(fire => fire.classList.remove("weak2"));    dragon.forEach(dragon => dragon.classList.remove("weak2"));
+    ground.forEach(ground => ground.classList.remove("weak2")); water.forEach(water => water.classList.remove("weak2")); rock.forEach(rock => rock.classList.remove("weak2"));  electric.forEach(electric => electric.classList.remove("weak2")); grass.forEach(grass => grass.classList.remove("weak2"));
+   fairy.forEach(fairy => fairy.classList.remove("weak2"));  bug.forEach(bug => bug.classList.remove("weak2"));  fighting.forEach(fighting => fighting.classList.remove("weak2")); psychic.forEach(psychic => psychic.classList.remove("weak2"));
+   normal.forEach(normal => normal.classList.remove("weak2"));
          //  removes pre-existing classLists from typeIcons in Effective Against
-         poison2.classList.remove("weak2"); steel2.classList.remove("weak2"); ice2.classList.remove("weak2");  flying2.classList.remove("weak2"); 
-         ghost2.classList.remove("weak2"); dark2.classList.remove("weak2"); fire2.classList.remove("weak2"); dragon2.classList.remove("weak2");
+         poison2.forEach(poison2 => poison2.classList.remove("weak2")); steel2.forEach(steel2 => steel2.classList.remove("weak2")); ice2.forEach(ice2 => ice2.classList.remove("weak2")); flying2.forEach(flying2 => flying2.classList.remove("weak2")); 
+         ghost2.forEach(ghost2 => ghost2.classList.remove("weak2")); dark2.forEach(dark2 => dark2.classList.remove("weak2")); fire2.forEach(fire2 => fire2.classList.remove("weak2")); dragon2.classList.remove("weak2");
          ground2.classList.remove("weak2"); water2.classList.remove("weak2"); rock2.classList.remove("weak2"); electric2.classList.remove("weak2"); grass2.classList.remove("weak2");
-         fairy2.classList.remove("weak2"); bug.forEach(bug => bug.classList.add("weak2")); fighting2.classList.remove("weak2"); psychic2.classList.remove("weak2");
+         fairy2.forEach(fairy2 => fairy2.classList.remove("weak2"));  bug2.forEach(bug2 => bug2.classList.remove("weak2")); fighting2.forEach(fighting2 => fighting2.classList.remove("weak2")); psychic2.forEach(psychic2 => psychic2.classList.remove("weak2"));
          normal2.classList.remove("weak2");
          //adds new classLists on change
-         if (type === "fairy" || type2 === "fairy") {  steel.forEach(steel => steel.classList.add("weak2"));   poison.forEach(poison => poison.classList.add("weak2")); fighting2.classList.add("weak2"); dark2.classList.add("weak2");  dragon2.classList.add("weak2");}
-         if (type === "ghost" || type2 === "ghost") {ghost.classList.add("weak2"); dark.classList.add("weak2"); ghost2.classList.add("weak2"); psychic2.classList.add("weak2"); }
-          if (type === "psychic" || type2 === "psychic"){dark.classList.add("weak2"); bug.forEach(bug => bug.classList.add("weak2"));  ghost.classList.add("weak2"); fighting2.classList.add("weak2"); poison2.classList.add("weak2");} 
-         if (type === "grass" || type2 === "grass"){ice.forEach(ice => ice.classList.add("weak2")); fire.classList.add("weak2");  poison.forEach(poison => poison.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));  flying.classList.add("weak2"); ground2.classList.add("weak2"); rock2.classList.add("weak2"); water2.classList.add("weak2");}
-         if (type === "bug" || type2 === "bug"){fire.classList.add("weak2"); flying.classList.add("weak2"); rock.classList.add("weak2");grass2.classList.add("weak2"); psychic2.classList.add("weak2"); dark2.classList.add("weak2"); }
-         if (type === "fire" || type2 === "fire"){ ground.classList.add("weak2"); water.classList.add("weak2"); rock.classList.add("weak2"); bug2.classList.add("weak2"); steel2.classList.add("weak2"); grass2.classList.add("weak2"); ice2.classList.add("weak2");}
-         if (type === "water" || type2 === "water"){electric.classList.add("weak2"); grass.classList.add("weak2"); ground2.classList.add("weak2"); rock2.classList.add("weak2"); fire2.classList.add("weak2"); }
-         if (type === "dark" || type2 === "dark") {fairy.classList.add("weak2"); bug.forEach(bug => bug.classList.add("weak2"));  fighting.classList.add("weak2"); ghost2.classList.add("weak2"); psychic2.classList.add("weak2"); }
-         if (type === "dragon" || type2 === "dragon"){dragon.classList.add("weak2"); fairy.classList.add("weak2"); ice.forEach(ice => ice.classList.add("weak2")); dragon2.classList.add("weak2"); }
-         if (type === "electric" || type2 === "electric"){ground.classList.add("weak2"); flying2.classList.add("weak2"); water2.classList.add("weak2");}
-         if (type === "fighting" || type2 === "fighting"){flying.classList.add("weak2"); fairy.classList.add("weak2"); psychic.classList.add("weak2"); normal2.classList.add("weak2"); rock2.classList.add("weak2"); steel2.classList.add("weak2"); ice2.classList.add("weak2"); dark2.classList.add("weak2");}
-         if (type === "flying" || type2 === "flying"){rock.classList.add("weak2"); electric.classList.add("weak2"); ice.forEach(ice => ice.classList.add("weak2")); fighting2.classList.add("weak2"); bug2.classList.add("weak2"); grass2.classList.add("weak2");}
-         if (type === "ground" || type2 === "ground"){ water.classList.add("weak2"); grass.classList.add("weak2"); ice.forEach(ice => ice.classList.add("weak2")); poison2.classList.add("weak2"); rock2.classList.add("weak2"); steel2.classList.add("weak2"); fire2.classList.add("weak2"); electric2.classList.add("weak2");}
-         if (type === "ice" || type2 === "ice"){fighting.classList.add("weak2"); rock.classList.add("weak2"); steel.forEach(steel => steel.classList.add("weak2")); fire.classList.add("weak2"); grass2.classList.add("weak2"); dragon2.classList.add("weak2"); flying2.classList.add("weak2"); ground2.classList.add("weak2");}
-         if (type === "normal" || type2 === "normal"){ fighting.classList.add("weak2"); }
-         if (type === "poison" || type2 === "poison"){ground.classList.add("weak2"); psychic.classList.add("weak2"); grass2.classList.add("weak2"); fairy2.classList.add("weak2");}
-         if (type === "rock" || type2 === "rock"){fighting.classList.add("weak2"); ground.classList.add("weak2"); steel.forEach(steel => steel.classList.add("weak2")); water.classList.add("weak2"); grass.classList.add("weak2"); flying2.classList.add("weak2"); bug2.classList.add("weak2"); fire2.classList.add("weak2"); ice2.classList.add("weak2"); }
-         if (type === "steel" || type2 === "steel"){fighting.classList.add("weak2"); ground.classList.add("weak2"); fire.classList.add("weak2"); rock2.classList.add("weak2"); ice2.classList.add("weak2"); fairy2.classList.add("weak2");}
+         if (type === "fairy" || type2 === "fairy") {  steel.forEach(steel => steel.classList.add("weak2"));   poison.forEach(poison => poison.classList.add("weak2")); fighting2.forEach(fighting2 => fighting2.classList.add("weak2")); dark2.forEach(dark2 => dark2.classList.add("weak2")); dragon2.classList.add("weak2");}
+         if (type === "ghost" || type2 === "ghost") { ghost.forEach(ghost => ghost.classList.add("weak2"));  dark.forEach(dark => dark.classList.add("weak2")); ghost2.forEach(ghost2 => ghost2.classList.add("weak2")); psychic2.forEach(psychic2 => psychic2.classList.add("weak2")); }
+          if (type === "psychic" || type2 === "psychic"){dark.forEach(dark => dark.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));  ghost.forEach(ghost => ghost.classList.add("weak2")); fighting2.forEach(fighting2 => fighting2.classList.add("weak2"));      poison2.forEach(poison2 => poison2.classList.add("weak2")); } 
+         if (type === "grass" || type2 === "grass"){ice.forEach(ice => ice.classList.add("weak2")); fire.forEach(fire => fire.classList.add("weak2"));  poison.forEach(poison => poison.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));  flying.forEach(flying => flying.classList.add("weak2")); ground2.classList.add("weak2"); rock2.classList.add("weak2"); water2.classList.add("weak2");}
+         if (type === "bug" || type2 === "bug"){fire.forEach(fire => fire.classList.add("weak2"));  flying.forEach(flying => flying.classList.add("weak2"));  rock.forEach(rock => rock.classList.add("weak2")); grass2.classList.add("weak2"); psychic2.forEach(psychic2 => psychic2.classList.add("weak2")); dark2.forEach(dark2 => dark2.classList.add("weak2")); }
+         if (type === "fire" || type2 === "fire"){  ground.forEach(ground => ground.classList.add("weak2")); water.forEach(water => water.classList.add("weak2")); rock.forEach(rock => rock.classList.add("weak2")); bug2.forEach(bug2 => bug2.classList.add("weak2"));  steel2.forEach(steel2 => steel2.classList.add("weak2")); grass2.classList.add("weak2"); ice2.forEach(ice2 => ice2.classList.add("weak2"));}
+         if (type === "water" || type2 === "water"){electric.forEach(electric => electric.classList.add("weak2"));  grass.forEach(grass => grass.classList.add("weak2")); ground2.classList.add("weak2"); rock2.classList.add("weak2"); fire2.forEach(fire2 => fire2.classList.add("weak2"));  }
+         if (type === "dark" || type2 === "dark") {   fairy.forEach(fairy => fairy.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));  fighting.forEach(fighting => fighting.classList.add("weak2")); ghost2.forEach(ghost2 => ghost2.classList.add("weak2")); psychic2.forEach(psychic2 => psychic2.classList.add("weak2")); }
+         if (type === "dragon" || type2 === "dragon"){dragon.forEach(dragon => dragon.classList.add("weak2")); fairy.forEach(fairy => fairy.classList.add("weak2")); ice.forEach(ice => ice.classList.add("weak2")); dragon2.classList.add("weak2"); }
+         if (type === "electric" || type2 === "electric"){ground.forEach(ground => ground.classList.add("weak2")); flying2.forEach(flying2 => flying2.classList.add("weak2")); water2.classList.add("weak2");}
+         if (type === "fighting" || type2 === "fighting"){ flying.forEach(flying => flying.classList.add("weak2"));  fairy.forEach(fairy => fairy.classList.add("weak2")); psychic.forEach(psychic => psychic.classList.add("weak2")); normal2.classList.add("weak2"); rock2.classList.add("weak2");  steel2.forEach(steel2 => steel2.classList.add("weak2")); ice2.forEach(ice2 => ice2.classList.add("weak2")); dark2.forEach(dark2 => dark2.classList.add("weak2"));}
+         if (type === "flying" || type2 === "flying"){rock.forEach(rock => rock.classList.add("weak2")); electric.forEach(electric => electric.classList.add("weak2"));  ice.forEach(ice => ice.classList.add("weak2")); fighting2.forEach(fighting2 => fighting2.classList.add("weak2")); bug2.forEach(bug2 => bug2.classList.add("weak2")); grass2.classList.add("weak2");}
+         if (type === "ground" || type2 === "ground"){ water.forEach(water => water.classList.add("weak2")); grass.forEach(grass => grass.classList.add("weak2")); ice.forEach(ice => ice.classList.add("weak2")); poison2.forEach(poison2 => poison2.classList.add("weak2")); rock2.classList.add("weak2");  steel2.forEach(steel2 => steel2.classList.add("weak2")); fire2.forEach(fire2 => fire2.classList.add("weak2"));  electric2.classList.add("weak2");}
+         if (type === "ice" || type2 === "ice"){fighting.forEach(fighting => fighting.classList.add("weak2")); rock.forEach(rock => rock.classList.add("weak2")); steel.forEach(steel => steel.classList.add("weak2")); fire.forEach(fire => fire.classList.add("weak2")); grass2.classList.add("weak2"); dragon2.classList.add("weak2"); flying2.forEach(flying2 => flying2.classList.add("weak2"));  ground2.classList.add("weak2");}
+         if (type === "normal" || type2 === "normal"){ fighting.forEach(fighting => fighting.classList.add("weak2")); }
+         if (type === "poison" || type2 === "poison"){ground.forEach(ground => ground.classList.add("weak2")); psychic.forEach(psychic => psychic.classList.add("weak2")); grass2.classList.add("weak2"); fairy2.forEach(fairy2 => fairy2.classList.add("weak2")); }
+         if (type === "rock" || type2 === "rock"){fighting.forEach(fighting => fighting.classList.add("weak2")); ground.forEach(ground => ground.classList.add("weak2")); steel.forEach(steel => steel.classList.add("weak2")); water.forEach(water => water.classList.add("weak2")); grass.forEach(grass => grass.classList.add("weak2")); flying2.forEach(flying2 => flying2.classList.add("weak2"));  bug2.forEach(bug2 => bug2.classList.add("weak2")); fire2.forEach(fire2 => fire2.classList.add("weak2"));  ice2.forEach(ice2 => ice2.classList.add("weak2")); }
+         if (type === "steel" || type2 === "steel"){fighting.forEach(fighting => fighting.classList.add("weak2")); ground.forEach(ground => ground.classList.add("weak2")); fire.forEach(fire => fire.classList.add("weak2")); rock2.classList.add("weak2"); ice2.forEach(ice2 => ice2.classList.add("weak2")); fairy2.forEach(fairy2 => fairy2.classList.add("weak2"));}
 }}
 , [type, type2]);
 
 if (loaded === "loaded"){
   // adds Effective against(ex dark2)/weak to(ex dark) Icons dependant on type1 and type 2 if applicable 
-  if (type === "fairy" || type2 === "fairy") {steel.forEach(steel => steel.classList.add("weak2"));  poison.forEach(poison => poison.classList.add("weak2")); fighting2.classList.add("weak2"); dark2.classList.add("weak2");  dragon2.classList.add("weak2");}
-  if (type === "ghost" || type2 === "ghost") {ghost.classList.add("weak2"); dark.classList.add("weak2"); ghost2.classList.add("weak2"); psychic2.classList.add("weak2"); }
-   if (type === "psychic" || type2 === "psychic"){dark.classList.add("weak2"); bug.forEach(bug => bug.classList.add("weak2")); ghost.classList.add("weak2"); fighting2.classList.add("weak2"); poison2.classList.add("weak2");} 
-  if (type === "grass" || type2 === "grass"){ice.forEach(ice => ice.classList.add("weak2")); fire.classList.add("weak2"); poison.forEach(poison => poison.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));  flying.classList.add("weak2"); ground2.classList.add("weak2"); rock2.classList.add("weak2"); water2.classList.add("weak2");}
-  if (type === "bug" || type2 === "bug"){fire.classList.add("weak2"); flying.classList.add("weak2"); rock.classList.add("weak2");grass2.classList.add("weak2"); psychic2.classList.add("weak2"); dark2.classList.add("weak2"); }
-  if (type === "fire" || type2 === "fire"){ ground.classList.add("weak2"); water.classList.add("weak2"); rock.classList.add("weak2"); bug2.classList.add("weak2"); steel2.classList.add("weak2"); grass2.classList.add("weak2"); ice2.classList.add("weak2");}
-  if (type === "water" || type2 === "water"){electric.classList.add("weak2"); grass.classList.add("weak2"); ground2.classList.add("weak2"); rock2.classList.add("weak2"); fire2.classList.add("weak2"); }
-  if (type === "dark" || type2 === "dark") {fairy.classList.add("weak2"); bug.forEach(bug => bug.classList.add("weak2"));  fighting.classList.add("weak2"); ghost2.classList.add("weak2"); psychic2.classList.add("weak2"); }
-  if (type === "dragon" || type2 === "dragon"){dragon.classList.add("weak2"); fairy.classList.add("weak2"); ice.forEach(ice => ice.classList.add("weak2")); dragon2.classList.add("weak2"); }
-  if (type === "electric" || type2 === "electric"){ground.classList.add("weak2"); flying2.classList.add("weak2"); water2.classList.add("weak2");}
-  if (type === "fighting" || type2 === "fighting"){flying.classList.add("weak2"); fairy.classList.add("weak2"); psychic.classList.add("weak2"); normal2.classList.add("weak2"); rock2.classList.add("weak2"); steel2.classList.add("weak2"); ice2.classList.add("weak2"); dark2.classList.add("weak2");}
-  if (type === "flying" || type2 === "flying"){rock.classList.add("weak2"); electric.classList.add("weak2"); ice.forEach(ice => ice.classList.add("weak2")); fighting2.classList.add("weak2"); bug2.classList.add("weak2"); grass2.classList.add("weak2");}
-  if (type === "ground" || type2 === "ground"){ water.classList.add("weak2"); grass.classList.add("weak2"); ice.forEach(ice => ice.classList.add("weak2")); poison2.classList.add("weak2"); rock2.classList.add("weak2"); steel2.classList.add("weak2"); fire2.classList.add("weak2"); electric2.classList.add("weak2");}
-  if (type === "ice" || type2 === "ice"){fighting.classList.add("weak2"); rock.classList.add("weak2"); steel.forEach(steel => steel.classList.add("weak2")); fire.classList.add("weak2"); grass2.classList.add("weak2"); dragon2.classList.add("weak2"); flying2.classList.add("weak2"); ground2.classList.add("weak2");}
-  if (type === "normal" || type2 === "normal"){ fighting.classList.add("weak2"); }
-  if (type === "poison" || type2 === "poison"){ground.classList.add("weak2"); psychic.classList.add("weak2"); grass2.classList.add("weak2"); fairy2.classList.add("weak2");}
-  if (type === "rock" || type2 === "rock"){fighting.classList.add("weak2"); ground.classList.add("weak2"); steel.forEach(steel => steel.classList.add("weak2")); water.classList.add("weak2"); grass.classList.add("weak2"); flying2.classList.add("weak2"); bug2.classList.add("weak2"); fire2.classList.add("weak2"); ice2.classList.add("weak2"); }
-  if (type === "steel" || type2 === "steel"){fighting.classList.add("weak2"); ground.classList.add("weak2"); fire.classList.add("weak2"); rock2.classList.add("weak2"); ice2.classList.add("weak2"); fairy2.classList.add("weak2");}
+  if (type === "fairy" || type2 === "fairy") {steel.forEach(steel => steel.classList.add("weak2"));  poison.forEach(poison => poison.classList.add("weak2")); fighting2.forEach(fighting2 => fighting2.classList.add("weak2")); dark2.forEach(dark2 => dark2.classList.add("weak2"));  dragon2.classList.add("weak2");}
+  if (type === "ghost" || type2 === "ghost") {ghost.forEach(ghost => ghost.classList.add("weak2"));  dark.forEach(dark => dark.classList.add("weak2")); ghost2.forEach(ghost2 => ghost2.classList.add("weak2")); psychic2.forEach(psychic2 => psychic2.classList.add("weak2")); }
+   if (type === "psychic" || type2 === "psychic"){dark.forEach(dark => dark.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2")); ghost.forEach(ghost => ghost.classList.add("weak2"));  fighting2.forEach(fighting2 => fighting2.classList.add("weak2"));poison2.forEach(poison2 => poison2.classList.add("weak2")); } 
+  if (type === "grass" || type2 === "grass"){ice.forEach(ice => ice.classList.add("weak2")); fire.forEach(fire => fire.classList.add("weak2")); poison.forEach(poison => poison.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));   flying.forEach(flying => flying.classList.add("weak2"));  ground2.classList.add("weak2"); rock2.classList.add("weak2"); water2.classList.add("weak2");}
+  if (type === "bug" || type2 === "bug"){fire.classList.add("weak2");  flying.forEach(flying => flying.classList.add("weak2"));  rock.forEach(rock => rock.classList.add("weak2")); grass2.classList.add("weak2"); psychic2.forEach(psychic2 => psychic2.classList.add("weak2")); dark2.forEach(dark2 => dark2.classList.add("weak2")); }
+  if (type === "fire" || type2 === "fire"){ ground.forEach(ground => ground.classList.add("weak2")); water.forEach(water => water.classList.add("weak2")); rock.forEach(rock => rock.classList.add("weak2"));bug2.forEach(bug2 => bug2.classList.add("weak2"));  steel2.forEach(steel2 => steel2.classList.add("weak2")); grass2.classList.add("weak2"); ice2.forEach(ice2 => ice2.classList.add("weak2"));}
+  if (type === "water" || type2 === "water"){electric.forEach(electric => electric.classList.add("weak2"));  grass.forEach(grass => grass.classList.add("weak2")); ground2.classList.add("weak2"); rock2.classList.add("weak2"); fire2.forEach(fire2 => fire2.classList.add("weak2"));  }
+  if (type === "dark" || type2 === "dark") {fairy.forEach(fairy => fairy.classList.add("weak2")); bug.forEach(bug => bug.classList.add("weak2"));  fighting.forEach(fighting => fighting.classList.add("weak2")); ghost2.forEach(ghost2 => ghost2.classList.add("weak2")); psychic2.forEach(psychic2 => psychic2.classList.add("weak2")); }
+  if (type === "dragon" || type2 === "dragon"){dragon.forEach(dragon => dragon.classList.add("weak2")); fairy.forEach(fairy => fairy.classList.add("weak2")); ice.forEach(ice => ice.classList.add("weak2")); dragon2.classList.add("weak2"); }
+  if (type === "electric" || type2 === "electric"){ground.forEach(ground => ground.classList.add("weak2")); flying2.forEach(flying2 => flying2.classList.add("weak2")); water2.classList.add("weak2");}
+  if (type === "fighting" || type2 === "fighting"){ flying.forEach(flying => flying.classList.add("weak2"));  fairy.forEach(fairy => fairy.classList.add("weak2")); psychic.forEach(psychic => psychic.classList.add("weak2")); normal2.classList.add("weak2"); rock2.classList.add("weak2");  steel2.forEach(steel2 => steel2.classList.add("weak2")); ice2.forEach(ice2 => ice2.classList.add("weak2")); dark2.forEach(dark2 => dark2.classList.add("weak2"));}
+  if (type === "flying" || type2 === "flying") {rock.forEach(rock => rock.classList.add("weak2")); electric.forEach(electric => electric.classList.add("weak2"));  ice.forEach(ice => ice.classList.add("weak2")); fighting2.forEach(fighting2 => fighting2.classList.add("weak2")); bug2.forEach(bug2 => bug2.classList.add("weak2")); grass2.classList.add("weak2");}
+  if (type === "ground" || type2 === "ground"){ water.forEach(water => water.classList.add("weak2")); grass.forEach(grass => grass.classList.add("weak2")); ice.forEach(ice => ice.classList.add("weak2")); poison2.forEach(poison2 => poison2.classList.add("weak2"));  rock2.classList.add("weak2");  steel2.forEach(steel2 => steel2.classList.add("weak2")); fire2.forEach(fire2 => fire2.classList.add("weak2")); electric2.classList.add("weak2");}
+  if (type === "ice" || type2 === "ice"){fighting.forEach(fighting => fighting.classList.add("weak2")); rock.forEach(rock => rock.classList.add("weak2")); steel.forEach(steel => steel.classList.add("weak2")); fire.forEach(fire => fire.classList.add("weak2")); grass2.classList.add("weak2"); dragon2.classList.add("weak2"); flying2.forEach(flying2 => flying2.classList.add("weak2"));  ground2.classList.add("weak2");}
+  if (type === "normal" || type2 === "normal"){ fighting.forEach(fighting => fighting.classList.add("weak2")); }
+  if (type === "poison" || type2 === "poison"){ground.forEach(ground => ground.classList.add("weak2")); psychic.forEach(psychic => psychic.classList.add("weak2")); grass2.classList.add("weak2"); fairy2.forEach(fairy2 => fairy2.classList.add("weak2"));}
+  if (type === "rock" || type2 === "rock"){fighting.forEach(fighting => fighting.classList.add("weak2")); ground.forEach(ground => ground.classList.add("weak2")); steel.forEach(steel => steel.classList.add("weak2")); water.forEach(water => water.classList.add("weak2")); grass.forEach(grass => grass.classList.add("weak2")); flying2.forEach(flying2 => flying2.classList.add("weak2"));  bug2.forEach(bug2 => bug2.classList.add("weak2")); fire2.forEach(fire2 => fire2.classList.add("weak2"));  ice2.forEach(ice2 => ice2.classList.add("weak2"));}
+  if (type === "steel" || type2 === "steel"){fighting.forEach(fighting => fighting.classList.add("weak2")); ground.forEach(ground => ground.classList.add("weak2")); fire.forEach(fire => fire.classList.add("weak2")); rock2.classList.add("weak2"); ice2.forEach(ice2 => ice2.classList.add("weak2")); fairy2.forEach(fairy2 => fairy2.classList.add("weak2"));}
 
 }
 if (pokePicture === null){return(null)}
