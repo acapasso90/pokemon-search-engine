@@ -86,11 +86,8 @@ let type = props.data.types[0].type.name;
 let type2 = null;
 if (props.data.types.length > 1){type2 = props.data.types[1].type.name;}
 let pokename = (props.data.forms[0].name);
-let pokeweakness = document.querySelector(".weakness");
-let pokestrengths = document.querySelector(".strengths");
 let pokeType = document.querySelector(".typeTitle");
-console.log(pokeType);
-let width = window.innerWidth;;
+
 
 let card = document.querySelector('.card');
 let shinyCard = document.getElementById('card2');

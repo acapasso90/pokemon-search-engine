@@ -56,7 +56,8 @@ background-color: #e06464}
 background-size: 170% 170%;
 }
 
-
+.ExtendedCards .pokePic  {min-width: 200px;
+min-height: 200px;}
 
 footer p {font-size: 20px;}
 .bug {background-image: url(./bug.png);}
@@ -151,10 +152,11 @@ animation: button 0.5s;}
   min-width: 100%;
   min-height: 50px;
 left: -13%;}
-  .weakness img, .strengths img {height: 50px;
+  .weakness img, .strengths img {max-height: 50px!important;
   display: none;
 margin-left: 10px;
 margin-right: 10px;}
+
 
 .poisonIcon:hover ~#hiddenPoison, .fireIcon:hover ~#hiddenFire, .steelIcon:hover ~#hiddenSteel, .electricIcon:hover ~#hiddenElectric,
 .flyingIcon:hover ~#hiddenFlying, .grassIcon:hover ~#hiddenGrass, .darkIcon:hover ~#hiddenDark, .rockSymbol:hover ~#hiddenRock,

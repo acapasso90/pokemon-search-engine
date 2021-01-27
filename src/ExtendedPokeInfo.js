@@ -9,6 +9,7 @@ export default function ExtendedPokeInfo(props){
     const cancelTokenSource = axios.CancelToken.source();
 
 function showExtendedInfo(response){
+    console.log(response)
     const official = "official-artwork";
     if (response.data.types.length > 1) {
     Setpokeinfo({
