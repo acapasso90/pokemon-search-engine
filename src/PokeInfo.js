@@ -246,7 +246,7 @@ if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
     </div>
         <div className="row" id="pokeNameRow">
         <div className="pokeType">
-      <h2 className="typeTitle">   {type} / {type2} type </h2>
+      <h2 className="typeTitle">   {type} / {type2} </h2>
       <b><p className="weakHeader">Weak Against</p></b>
       <div className="weakness">
         <div className="row">
@@ -329,7 +329,8 @@ else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {retu
     </div>
       <div className="row" id="pokeNameRow">
       <div className="pokeType">
-      <h2 className="typeTitle">   {type} / {type2} type </h2>
+      <h2 className="typeTitle">   {type} / {type2}
+      </h2>
       <b><p className="weakHeader">Weak Against</p></b>
       <div className="weakness">
         <div className="row">
@@ -494,7 +495,7 @@ else { return(<div className="pokeInfo">
       <p><b>{stat6name}</b> : {stat6} </p>
         </div>
     </div>
-        <h2 className="typeTitle">{type} / {type2} type </h2>
+        <h2 className="typeTitle">{type} / {type2} </h2>
         <b><p className="weakHeader">Weak Against</p></b>
       <div className="weakness">
         <div className="row">

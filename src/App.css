@@ -22,7 +22,8 @@ color: #e7d6d6;}
 .card {
   margin-top: 100px;
 min-height: 414px;
-width: 294px;
+min-width: 294px;
+max-width: 294px;
 margin-left:  200px;
 margin-right: 200px;
 border-radius: 5%;
@@ -167,13 +168,13 @@ margin-right: 10px;}
 {display: inherit;}
 
 .weakness label{position: absolute;
-  bottom: -15%;
+  bottom: -35%;
   font-weight: bold;
   font-size: 16pt;
 }
 
 .strengths label {position: absolute;
-  bottom: -30.5%;
+  bottom: -40.5%;
 padding-right: 2%;
 font-weight: bold;
 font-size: 16pt;
@@ -220,7 +221,7 @@ top: 140px;}
   margin-left: 8%;}
 
     .pokeInfo .column {
-      right: 40%;
+      right: 36%;
     margin-top: -0.05%;}
 
     
@@ -246,48 +247,33 @@ width: 100%;
 
       .strengths {
         top: 108%;
-        margin-left: -32%;
+        margin-left: -90px;
         min-width: 100%;
        }
 
 
-       .strengthsBig {
-         position: relative;
-         left: -40%;
-       }
-
-       .strengthsBigFire {
-        position: relative;
-        left: -10%;
-      }
-       .strengthsBigRock {
-        position: relative;
-        left: -7%;
-      }
-    
       .strengthsHeader {
-        right: 55%;
+        right: 120px;
         white-space: nowrap;
-     
       top: 110%;}
 
       .typeTitle {        white-space: nowrap;
         width: 100%;
         position: relative;
-      left: 44%;}
+      left: 78px;}
 
 
         .weakness img, .strengths img {
-          margin-left: 1px;
-          margin-right: 1px;}
+          margin-left: -0.5px;
+          margin-right: 0px;}
 
           .weakness {position: relative;
           top: 12%;
-        left: 80px;}
+        left: 95px;}
 
 .weakHeader {position: absolute;
             width: 316px;
-            left: 45%;
+            left: 50%;
           bottom: 10%;}
   
  }
@@ -296,7 +282,6 @@ width: 100%;
 
 @media only screen and (max-width: 1025px) and (min-width: 501px){
 
-  .card {width: 294px;}
 
   .icon {height: 40%;
     width: 255px;
