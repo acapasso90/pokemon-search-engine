@@ -217,9 +217,15 @@ top: 140px;}
     }
 
     .pokeType {
-      left: 35%;
+margin-left: 45%;
+      width: 100%;
       }
 
+
+    #pokeNameRow .right {width: 100%;
+      position: relative;
+      right: 10%;
+}
       
     .searchBar {
       width: 52%;
@@ -227,12 +233,14 @@ top: 140px;}
 
       .strengths {
         top: 108%;
-        right: 67%;}
+        margin-left: -70%;
+        min-width: 100%;
+       }
     
 
         .weakness img, .strengths img {
-          margin-left: 5px;
-          margin-right: 5px;}
+          margin-left: 2px;
+          margin-right: 2px;}
  }
 
 
