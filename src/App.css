@@ -20,11 +20,11 @@ color: #e7d6d6;}
 .builtBy {margin-top: 4%;}
 
 .card {
-  margin-top: 50px;
+  margin-top: 100px;
 min-height: 414px;
 width: 294px;
-margin-left:  100px;
-margin-right: 100px;
+margin-left:  200px;
+margin-right: 200px;
 border-radius: 5%;
 }
 
@@ -79,8 +79,8 @@ footer p {font-size: 20px;}
 color: #ffffff;}
 
 
-.officialImg {height: 25%;
-  width: 25%;
+.officialImg {height: 327px;
+  width: 327px;
 margin-right: 8%;}
 
 .pokeName {text-transform: capitalize;
@@ -108,8 +108,8 @@ width: 100%;}
 .pokeInfo .column {display: flex;
   flex-direction: column;
   position: relative;
-  right: 205%;
-  margin-top: 12%;}
+  right: 160%;
+  margin-top: 17%;}
 
 
 #pokeNameRow .right {min-width: 50%;
@@ -125,10 +125,10 @@ margin-right: 2px;}
 .strengths {position: relative;
   top: 38%;
   width: 100%;
-  right: 18%;}
+  right: 8%;}
 
   .strengthsHeader {position: relative;
-  right: 18%;
+  right: 7%;
 top: 36%;}
 
 .submitButton {background-color: #9c0101;
@@ -145,8 +145,11 @@ animation: button 0.5s;}
 .submitButton:hover {background-color: #e7d6d6;
   color: #9c0101;}
 
+.typeTitle {padding-left: 10%;}
 .weakness {position: absolute;
-  min-width: 100%;}
+  min-width: 100%;
+  min-height: 50px;
+left: -13%;}
   .weakness img, .strengths img {height: 50px;
   display: none;
 margin-left: 10px;
@@ -177,6 +180,9 @@ font-size: 16pt;
 }
 
   .weak2 {display: inherit!important;}
+
+  .weakHeader {position: relative;
+  right: 13%;}
 
 @keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
@@ -224,7 +230,8 @@ top: 140px;}
     }
 
     .pokeType {
-margin-left: 20%;
+padding-left: 30%;
+width: 100%;
       }
 
 
@@ -266,7 +273,8 @@ margin-left: 20%;
 
       .typeTitle {        white-space: nowrap;
         width: 100%;
-      margin-left: 3%;}
+        position: relative;
+      left: 44%;}
 
 
         .weakness img, .strengths img {
@@ -274,22 +282,12 @@ margin-left: 20%;
           margin-right: 1px;}
 
           .weakness {position: relative;
-          top: 12%;}
+          top: 12%;
+        left: 80px;}
 
-          .weaknessBig {
-position: relative;
-left: 15%;
-          }
-
-.weaknessBigRock {
-            position: relative;
-            left: 40%;}
-.weaknessBigFire {
-          position: relative;
-           left: 15%;}
 .weakHeader {position: absolute;
-            width: 200px;
-            left: 25%;
+            width: 316px;
+            left: 45%;
           bottom: 10%;}
   
  }
@@ -309,9 +307,7 @@ left: 15%;
     margin-left: -8%;
 }
 
-  .pokeInfo .column {
-    right: 80%;
-  margin-top: -0.05%;}
+
 
   
 .searchBar {

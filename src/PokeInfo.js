@@ -226,15 +226,6 @@ if (type === "normal" || type === "flying"){card.classList.add('normal'); shinyC
  if (type === "dark"){ card.classList.add('darkness'); shinyCard.classList.add('darkness');} 
 if (type === "fighting") {card.classList.add('fighting'); shinyCard.classList.add('fighting');}
 
-if (width < 500){
-  if (type === "grass"  || type2 === "grass")
-  {pokeweakness.classList.add("weaknessBig"); pokestrengths.classList.add("strengthsBig"); pokeweakness.classList.remove("weaknessBigRock"); pokestrengths.classList.remove("strengthsBigRock"); }
-  else if (type === "rock" || type2 ==="rock") {pokeweakness.classList.add("weaknessBigRock"); pokestrengths.classList.add("strengthsBigRock"); }
-  else if (type === "fire" || type === "fighting" || type === "ground" || type2 === "ground" ||  type2 === "fighting" || type2 === "fire"){ pokeweakness.classList.remove("weaknessBigRock"); pokestrengths.classList.remove("strengthsBigRock"); pokeweakness.classList.add("weaknessBigFire"); pokestrengths.classList.add("strengthsBigFire");}
-else if (type === "bug" || type2 === "bug" ){}
-  else {pokeweakness.classList.remove("weaknessBig");  pokeweakness.classList.add("weakness"); pokestrengths.classList.add("strengths"); pokeweakness.classList.remove("weaknessBigRock"); pokestrengths.classList.remove("strengthsBigRock"); pokeweakness.classList.remove("weaknessBigRock"); pokestrengths.classList.remove("strengthsBigRock"); pokeweakness.classList.remove("weaknessBigFire"); pokestrengths.classList.remove("strengthsBigFire");}
-  }
-
 }
 
 
