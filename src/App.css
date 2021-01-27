@@ -22,7 +22,7 @@ color: #e7d6d6;}
 .card {
   margin-top: 50px;
 min-height: 414px;
-width: 18.4%;
+width: 294px;
 margin-left:  100px;
 margin-right: 100px;
 border-radius: 5%;
@@ -47,7 +47,7 @@ background-color: #e06464}
 
 .icon {
   height: 40%;
-  width: 83%;
+  width: 255px;
   position: relative;
   right: -1.1px;
   top: -28px;
@@ -93,8 +93,9 @@ font-size: 16pt;
 
 .pokeType {
 position: relative;
-left: 9%;
-width: 100%;}
+left: 10%;
+min-width: 50%;
+width: 50%;}
 
 
 .right {float: right;}
@@ -111,7 +112,8 @@ width: 100%;}
   margin-top: 12%;}
 
 
-#pokeNameRow .right {width: 100%;}
+#pokeNameRow .right {min-width: 50%;
+margin-top: 2.15%;}
 
 .searchBar {height: 35px;
   width: 20%;
@@ -124,6 +126,10 @@ margin-right: 2px;}
   top: 38%;
   width: 100%;
   right: 18%;}
+
+  .strengthsHeader {position: relative;
+  right: 18%;
+top: 36%;}
 
 .submitButton {background-color: #9c0101;
   color: #e7d6d6;
@@ -139,7 +145,8 @@ animation: button 0.5s;}
 .submitButton:hover {background-color: #e7d6d6;
   color: #9c0101;}
 
-
+.weakness {position: absolute;
+  min-width: 100%;}
   .weakness img, .strengths img {height: 50px;
   display: none;
 margin-left: 10px;
@@ -218,11 +225,10 @@ top: 140px;}
 
     .pokeType {
 margin-left: 20%;
-      width: 100%;
       }
 
 
-    #pokeNameRow .right {width: 100%;
+#pokeNameRow .right {min-width: 100%;
       position: relative;
       right: 10%;
 }
@@ -236,11 +242,56 @@ margin-left: 20%;
         margin-left: -32%;
         min-width: 100%;
        }
+
+
+       .strengthsBig {
+         position: relative;
+         left: -40%;
+       }
+
+       .strengthsBigFire {
+        position: relative;
+        left: -10%;
+      }
+       .strengthsBigRock {
+        position: relative;
+        left: -7%;
+      }
     
+      .strengthsHeader {
+        right: 55%;
+        white-space: nowrap;
+     
+      top: 110%;}
+
+      .typeTitle {        white-space: nowrap;
+        width: 100%;
+      margin-left: 3%;}
+
 
         .weakness img, .strengths img {
-          margin-left: 2px;
-          margin-right: 2px;}
+          margin-left: 1px;
+          margin-right: 1px;}
+
+          .weakness {position: relative;
+          top: 12%;}
+
+          .weaknessBig {
+position: relative;
+left: 15%;
+          }
+
+.weaknessBigRock {
+            position: relative;
+            left: 40%;}
+.weaknessBigFire {
+          position: relative;
+           left: 15%;}
+.weakHeader {position: absolute;
+            width: 200px;
+            left: 25%;
+          bottom: 10%;}
+  
  }
 
 
