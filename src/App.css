@@ -210,6 +210,7 @@ top: 140px;}
     min-height: 304px;
   background-repeat: no-repeat;}
 
+  .container  {overflow-x: hidden;}
   .header {
   font-size: 30pt;
   margin-bottom: 10px;
