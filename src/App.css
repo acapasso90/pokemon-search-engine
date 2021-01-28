@@ -134,7 +134,7 @@ margin-right: 8%;}
     .statTitle {font-weight: bold;}
     
     .strengths {
-      width: 80%;}
+      width: 60%;}
     
       .strengthsHeader {position: absolute;
       right: 22%;
@@ -165,7 +165,14 @@ margin-right: 8%;}
     margin-left: 10px;
     margin-right: 10px;}
 
+    .weak2:hover {max-height: 55px!important;
+      margin-left: 7.8px;
+    margin-right:  7.8px;
+     }
 
+    .strengths .weak2:hover { margin-top: -5px;
+    margin-left: 6.8px;
+    margin-right: 7.8px;}
 
 .poisonIcon:hover ~#hiddenPoison, .fireIcon:hover ~#hiddenFire, .steelIcon:hover ~#hiddenSteel, .electricIcon:hover ~#hiddenElectric,
 .flyingIcon:hover ~#hiddenFlying, .grassIcon:hover ~#hiddenGrass, .darkIcon:hover ~#hiddenDark, .rockSymbol:hover ~#hiddenRock,
@@ -328,7 +335,7 @@ padding-top: 29%;
 @media only screen and (min-width: 1026px){
 
   .strengths {position: absolute;
-    left: 32%;
+    left: 42%;
   bottom: -42%;}
 
 

@@ -38,6 +38,7 @@ export default function PokeSearch(){
         const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
     axios.get(APIurl).then(setInfo);}
     
+    
     if(loaded){
         return(
             <div className="PokeSearch">
