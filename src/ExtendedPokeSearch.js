@@ -6,12 +6,15 @@ import ExtendedPokeInfo from "./ExtendedPokeInfo.js"
 
 export default function PokeSearch(){
     const [pokemonType, setPokemonType] = useState("dark");
+    const [nameType, setNameType] = useState("");
+    const [pokemonTypeReady, setPokemonTypeReady] = useState("");
     const [arrayLength, setArrayLength] = useState("");
     const [pokeinfo, Setpokeinfo] = useState("");
     const [loaded, setLoaded] = useState(false);
     const [loadedStatus, setLoadedStatus] = useState(" ");
     
     function setInfo(response){
+      setNameType(response.data.name);
         Setpokeinfo(response.data.pokemon);
        setArrayLength(response.data.pokemon.length);
     setLoaded(true);
@@ -19,6 +22,7 @@ export default function PokeSearch(){
     }
     
     function handleSubmit(event){  event.preventDefault();
+        setPokemonType(pokemonTypeReady);
         const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
     axios.get(APIurl).then(setInfo);
     }
@@ -27,14 +31,15 @@ export default function PokeSearch(){
     function setPokemon(event){
         event.preventDefault();
        const pokemonTypeLowercase = (event.target.value).toLowerCase();
-       setPokemonType(pokemonTypeLowercase);
+       setPokemonTypeReady(pokemonTypeLowercase);
     }
     
     function extendedSearch() {
         const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
     axios.get(APIurl).then(setInfo);}
     
-    if(loaded){return(
+    if(loaded){
+        return(
             <div className="PokeSearch">
         <form onSubmit={handleSubmit} >
         <input type="text" onChange={setPokemon} placeholder="Search by Pokémon Type" 
@@ -42,7 +47,7 @@ export default function PokeSearch(){
         <input type="submit" placeholder="Submit" className="submitButton" />
         </form>
         {pokeinfo.slice(0, arrayLength).map(function(pokemonNumber){
-            return(<ExtendedPokeInfo data={pokemonNumber.pokemon.url} loading={loadedStatus}/>)})}
+            return(<ExtendedPokeInfo data={pokemonNumber.pokemon.url} type={nameType} loading={loadedStatus}/>)})}
             </div>)}
     
     else{ extendedSearch();
