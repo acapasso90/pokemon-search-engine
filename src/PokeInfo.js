@@ -101,7 +101,9 @@ let doesEvolve = response.data.evolves_from_species;
 if (doesEvolve != null){
     let evolutionName = response.data.evolves_from_species.name;
 const APIurl = `https://pokeapi.co/api/v2/pokemon/${evolutionName}`;
-axios.get(APIurl).then(showEvolutionExtendedInfo);}}
+axios.get(APIurl).then(showEvolutionExtendedInfo);}
+else {setPokeInfo({info: null,
+loaded: "loaded",})}}
 
 
 useEffect(() => {
