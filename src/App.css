@@ -34,6 +34,13 @@ margin-bottom: 3px;}
 
 .container {width: 100vw;}
 
+.evolvesFromHeader {width: 14%;
+  white-space: nowrap;
+margin-left: auto;
+padding-top: 8%;
+margin-right: auto;
+text-align: center;}
+
 .header {width: 100%;
   font-family: 'Press Start 2P', cursive;
   padding-top: 10px;
@@ -86,6 +93,11 @@ color: #ffffff;}
   min-width: 327px;
   width: 327px;
 margin-right: 8%;}
+
+.evolutionImg {height: 327px;
+  min-height: 327px;
+  min-width: 327px;
+  width: 327px;}
 
 
 .pokeName {text-transform: capitalize;

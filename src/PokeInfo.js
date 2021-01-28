@@ -93,7 +93,8 @@ let card = document.querySelector('.card');
 let shinyCard = document.getElementById('card2');
 
 function showEvolutionExtendedInfo(response){
-    setPokeInfo(response.data);}
+    setPokeInfo({info: response.data,
+      loaded: "loaded",});}
 
 function showEvolutionInfo(response){
 let doesEvolve = response.data.evolves_from_species;
