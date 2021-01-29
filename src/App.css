@@ -17,6 +17,7 @@ color: #e7d6d6;}
 
 .abilityHeader {font-weight: bold;
 text-align: left;
+margin-top: -10%;
 padding-left: 20px;}
 .alcremieGif {width: 20%;}
 
@@ -55,6 +56,9 @@ background-color: #e06464}
 
 .hidden {display: none;}
 
+.hidden2 {display: inherit;
+text-transform: lowercase;
+}
 
 .icon {
   height: 40%;
@@ -142,6 +146,8 @@ margin-right: auto;
     justify-content: center;
     width: 100%;}
 
+.PokeAbilities p {text-transform: capitalize;
+margin-top: -1%;}
 
     .pokeInfo .column {display: flex;
       flex-direction: column;

@@ -8,7 +8,6 @@ export default function PokeAbilities(props){
     let hidden2 = props.data.isHidden2Here;
     let abilityList = props.data.abilityListHere;
 let loaded = props.data.loaded;
-    console.log(loaded);
 if (loaded === "loaded"){
     if (abilityList.length <= 1){
     return(<div className="PokeAbilities">

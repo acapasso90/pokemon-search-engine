@@ -112,12 +112,16 @@ loaded: "loaded",})}}
 useEffect(() => {
     let mounted = true;
     const cancelTokenSource = axios.CancelToken.source();
-    if (mounted) {setAbilityInfo({abilityHere: props.data.abilities[0].ability.name,
+    if (mounted) { if (abilityList.length >1) {setAbilityInfo({abilityHere: props.data.abilities[0].ability.name,
       isHiddenHere: props.data.abilities[0].is_hidden,
       abilityListHere: props.data.abilities,
       ability2Here: props.data.abilities[1].ability.name,
       isHidden2Here: props.data.abilities[1].is_hidden,
-    loaded: loaded,});
+    loaded: "loaded",})}
+    else {setAbilityInfo({abilityHere: props.data.abilities[0].ability.name,
+      isHiddenHere: props.data.abilities[0].is_hidden,
+      abilityListHere: props.data.abilities,
+    loaded: "loaded",})};
       axios.get(evolutionURL, {
         cancelToken: cancelTokenSource.token
       }).then(showEvolutionInfo);}
