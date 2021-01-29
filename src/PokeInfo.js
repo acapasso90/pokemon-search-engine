@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import EvolutionInfo from "./EvolutionInfo.js";
+import PokeAbilities from "./PokeAbilities.js";
 import grassIcon from "./grassIcon.png";
 import groundIcon from "./groundIcon.png"
 import bugIcon from "./bugIcon.png";
@@ -32,6 +33,8 @@ let ability1 = props.data.abilities[0].ability.name;
 let abilityList = props.data.abilities;
 let ability2 = null;
 if (abilityList.length > 1){ability2 = props.data.abilities[1].ability.name;}
+const [abilityInfo, setAbilityInfo] = useState("");
+
 let stat1name = props.data.stats[0].stat.name;
 let stat1 = props.data.stats[0].base_stat;
 let stat2name = props.data.stats[1].stat.name;
@@ -109,7 +112,13 @@ loaded: "loaded",})}}
 useEffect(() => {
     let mounted = true;
     const cancelTokenSource = axios.CancelToken.source();
-    if (mounted) {axios.get(evolutionURL, {
+    if (mounted) {setAbilityInfo({abilityHere: props.data.abilities[0].ability.name,
+      isHiddenHere: props.data.abilities[0].is_hidden,
+      abilityListHere: props.data.abilities,
+      ability2Here: props.data.abilities[1].ability.name,
+      isHidden2Here: props.data.abilities[1].is_hidden,
+    loaded: loaded,});
+      axios.get(evolutionURL, {
         cancelToken: cancelTokenSource.token
       }).then(showEvolutionInfo);}
     return function cleanup() {
@@ -304,13 +313,13 @@ if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
     <div className="card" id="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
 <div className="abilityHeader"> Abilities </div> 
-     {ability1}
+<PokeAbilities data={abilityInfo} />
   </div>
     <div className="card" id="card2">
     <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
     <div className="abilityHeader"> Abilities </div> 
-{ability1}
+<PokeAbilities data={abilityInfo} />
 </div></div>
     </div>    )}
 
@@ -390,15 +399,13 @@ else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {retu
     <div className="card" id="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
     <div className="abilityHeader"> Abilities </div> 
-   {ability1} <br />
- {ability2}
+ <PokeAbilities data={abilityInfo} />
   </div>
     <div className="card" id="card2">
     <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
     <div className="abilityHeader"> Abilities </div> 
- {ability1} <br />
- {ability2}
+ <PokeAbilities data={abilityInfo} />
 </div></div>
     </div> )}
 
@@ -476,14 +483,13 @@ else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {retu
     <div className="card" id="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
     <div className="abilityHeader"> Abilities </div> 
-    {ability1}
+    <PokeAbilities data={abilityInfo} />
   </div>
     <div className="card" id="card2">
     <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
     <div className="abilityHeader"> Abilities </div> 
-    {ability1}
- 
+    <PokeAbilities data={abilityInfo} />
 </div></div>
     </div>  )}
 
@@ -560,12 +566,15 @@ else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {retu
   </div>
     <EvolutionInfo data={pokeInfo} />
     <div className="row" id="cardRow">
-    <div className="card"> <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" /> Ability: {ability1} </div>
+    <div className="card"> <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" /> 
+    <div className="abilityHeader"> Abilities </div> 
+<PokeAbilities data={abilityInfo} />
+     </div>
     <div className="card" id="card2">
    <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
     <div className="abilityHeader"> Abilities </div> 
-{ability1}
+<PokeAbilities data={abilityInfo} />
 </div></div>
     </div> )}
 
@@ -644,12 +653,12 @@ else { return(<div className="pokeInfo">
   <div className="card" id="card"> 
   <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
   <div className="abilityHeader"> Abilities </div> 
-  {ability1}
+  <PokeAbilities data={abilityInfo} />
   </div>
   <div className="card" id="card2">
   <h3 className="pokeName">Shiny {pokename}</h3>
   <img src={shinyIcon} className="icon" alt="shiny" /> 
   <div className="abilityHeader"> Abilities </div> 
-  {ability1}
+<PokeAbilities data={abilityInfo} />
   </div></div>
   </div> )}}

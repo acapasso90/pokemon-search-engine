@@ -15,6 +15,9 @@ color: #e7d6d6;}
   text-align: center;
 }
 
+.abilityHeader {font-weight: bold;
+text-align: left;
+padding-left: 20px;}
 .alcremieGif {width: 20%;}
 
 .builtBy {margin-top: 4%;}
@@ -22,6 +25,7 @@ color: #e7d6d6;}
 .card {
   margin-top: 100px;
 min-height: 414px;
+max-height: 414px;
 min-width: 294px;
 max-width: 294px;
 margin-left:  155px;
