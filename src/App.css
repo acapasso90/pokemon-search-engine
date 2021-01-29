@@ -24,11 +24,10 @@ color: #e7d6d6;}
 min-height: 414px;
 min-width: 294px;
 max-width: 294px;
-margin-left:  200px;
-margin-right: 200px;
+margin-left:  155px;
+margin-right: 155px;
 border-radius: 5%;
 }
-
 .column p {margin-top: 3px;
 margin-bottom: 3px;}
 
@@ -92,7 +91,7 @@ color: #ffffff;}
   min-height: 327px;
   min-width: 327px;
   width: 327px;
-margin-right: 8%;}
+margin-right: 22%;}
 
 .evolutionImg {height: 327px;
   min-height: 327px;
@@ -106,8 +105,19 @@ margin-right: 8%;}
   font-size: 16pt;
   }
   
-  .nameTitle {text-transform: capitalize;}
+  .nameTitle {text-transform: capitalize;
+  font-size: 40pt;
+  text-align: left;
+  width: 50%;
+  margin-left: auto;
+margin-right: auto;
+}
   
+  .pokePictureBox {border: 4px solid black;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
   
   .pokeType {
     position: relative;
@@ -128,11 +138,12 @@ margin-right: 8%;}
     justify-content: center;
     width: 100%;}
 
+
     .pokeInfo .column {display: flex;
       flex-direction: column;
       position: relative;
-      right: 160%;
-      margin-top: 17%;}
+      left: -175%;
+}
     
     
     #pokeNameRow .right {min-width: 50%;
@@ -146,11 +157,11 @@ margin-right: 8%;}
     .statTitle {font-weight: bold;}
     
     .strengths {
-      width: 60%;}
+      width: 40%;}
     
       .strengthsHeader {position: absolute;
-      right: 22%;
-    bottom: -36%;}
+      right: 24%;
+    bottom: -41.5%;}
     
     .submitButton {background-color: #9c0101;
       color: #e7d6d6;
@@ -166,10 +177,10 @@ margin-right: 8%;}
     .submitButton:hover {background-color: #e7d6d6;
       color: #9c0101;}
     
-    .typeTitle {padding-left: 10%;}
+    .typeTitle {padding-right: 14.5%;}
 
     .weakness {
-      min-width: 100%;
+      min-width: 90%;
       min-height: 50px;}
       
       .weakness img, .strengths img {max-height: 50px!important;
@@ -213,7 +224,7 @@ font-size: 16pt;
   .weak2 {display: inherit!important;}
 
   .weakHeader {position: relative;
-  right: 13%;}
+  right: 7%;}
 
 @keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
@@ -347,10 +358,10 @@ padding-top: 29%;
 @media only screen and (min-width: 1026px){
 
   .strengths {position: absolute;
-    left: 42%;
-  bottom: -42%;}
+    left: 50%;
+  bottom: -48%;}
 
 
   .weakness {position: absolute;
-  left: -13%;}
+  left: -3%;}
 }

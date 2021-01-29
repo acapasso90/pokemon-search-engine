@@ -300,21 +300,23 @@ if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
   </div>
   </div>
     <EvolutionInfo data={pokeInfo} />
-    <div className="row">
+    <div className="row" id="cardRow">
     <div className="card" id="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
-    Ability: {ability1}
+<div className="abilityHeader"> Abilities </div> 
+     {ability1}
   </div>
     <div className="card" id="card2">
     <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
- Ability: {ability1}
+    <div className="abilityHeader"> Abilities </div> 
+{ability1}
 </div></div>
     </div>    )}
 
 
 else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {return(<div className="pokeInfo">
-         <h2 className="nameTitle">{pokename}</h2>
+           <h2 className="nameTitle">{pokename}</h2>
          <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column" id="stats">
@@ -384,22 +386,24 @@ else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {retu
   </div>
   </div>
     <EvolutionInfo data={pokeInfo} />
-    <div className="row">
+    <div className="row" id="cardRow">
     <div className="card" id="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
-    Ability: {ability1}
- Ability: {ability2}
+    <div className="abilityHeader"> Abilities </div> 
+   {ability1} <br />
+ {ability2}
   </div>
     <div className="card" id="card2">
     <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
-    Ability: {ability1}
- Ability: {ability2}
+    <div className="abilityHeader"> Abilities </div> 
+ {ability1} <br />
+ {ability2}
 </div></div>
     </div> )}
 
     else if (abilityList.length < 1 ) {return(<div className="pokeInfo">
-          <h2 className="nameTitle">{pokename}</h2>
+       <h2 className="nameTitle">{pokename}</h2>
          <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column" id="stats">
@@ -468,22 +472,24 @@ else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {retu
   </div>
   </div>
     <EvolutionInfo data={pokeInfo} />
-    <div className="row">
+    <div className="row" id="cardRow">
     <div className="card" id="card"> 
     <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
-    Ability: {ability1}
+    <div className="abilityHeader"> Abilities </div> 
+    {ability1}
   </div>
     <div className="card" id="card2">
     <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
- Ability: {ability1}
+    <div className="abilityHeader"> Abilities </div> 
+    {ability1}
  
 </div></div>
     </div>  )}
 
 
 else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {return(<div className="pokeInfo">
-         <h2 className="nameTitle">{pokename}</h2>
+             <h2 className="nameTitle">{pokename}</h2>
          <img src={pokePicture} className="officialImg" alt="officialArtwork" />
     <div className="right">
         <div className="column" id="stats">
@@ -553,29 +559,30 @@ else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {retu
   </div>
   </div>
     <EvolutionInfo data={pokeInfo} />
-    <div className="row">
+    <div className="row" id="cardRow">
     <div className="card"> <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" /> Ability: {ability1} </div>
     <div className="card" id="card2">
    <h3 className="pokeName">Shiny {pokename}</h3>
     <img src={shinyIcon} className="icon" alt="shiny" /> 
- Ability: {ability1}
+    <div className="abilityHeader"> Abilities </div> 
+{ability1}
 </div></div>
     </div> )}
 
 else { return(<div className="pokeInfo">
-  <h2 className="nameTitle">{pokename}</h2>
-  <img src={pokePicture} className="officialImg" alt="officialArtwork" />
-  <div className="right">
-  <div className="column" id="stats">
-  <h3>Base Stats</h3>
-  <p> <b>{stat1name} </b>: {stat1} </p> 
-  <p><b> {stat2name}</b> : {stat2} </p>
-  <p> <b> {stat3name}</b> : {stat3} </p>
-  <p><b>{stat4name}</b>: {stat4} </p>
-  <p><b>{stat5name}</b> : {stat5} </p>
-  <p><b>{stat6name}</b> : {stat6} </p>
-  </div>
-  </div>
+        <h2 className="nameTitle">{pokename}</h2>
+         <img src={pokePicture} className="officialImg" alt="officialArtwork" />
+    <div className="right">
+        <div className="column" id="stats">
+        <h3>Base Stats</h3>
+        <p> <b>{stat1name} </b>: {stat1} </p> 
+      <p><b> {stat2name}</b> : {stat2} </p>
+      <p> <b> {stat3name}</b> : {stat3} </p>
+      <p><b>{stat4name}</b>: {stat4} </p>
+      <p><b>{stat5name}</b> : {stat5} </p>
+      <p><b>{stat6name}</b> : {stat6} </p>
+        </div>
+    </div>
   <div id="pokeNameRow">
   <div className="pokeType">
   <h2 className="typeTitle">   {type} 
@@ -633,14 +640,16 @@ else { return(<div className="pokeInfo">
   </div>
   </div>
   <EvolutionInfo data={pokeInfo} />
-  <div className="row">
+  <div className="row" id="cardRow">
   <div className="card" id="card"> 
   <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
-  Ability: {ability1}
+  <div className="abilityHeader"> Abilities </div> 
+  {ability1}
   </div>
   <div className="card" id="card2">
   <h3 className="pokeName">Shiny {pokename}</h3>
   <img src={shinyIcon} className="icon" alt="shiny" /> 
-  Ability: {ability1}
+  <div className="abilityHeader"> Abilities </div> 
+  {ability1}
   </div></div>
   </div> )}}
