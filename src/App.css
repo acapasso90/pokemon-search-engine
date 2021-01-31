@@ -249,8 +249,8 @@ margin-top: -5px;
  }
 
 .strengths .weak2:hover { margin-top: -5px;
-margin-left: -3px;
-margin-right: -3px;}
+margin-left: -2.4px;
+margin-right: -2.4px;}
 
   .alcremieGif {width: 30%;}
 
@@ -260,12 +260,15 @@ margin-right: -3px;}
     width: 150px;
    }
 
+   #cardRow {position: relative;
+  margin-top: 350px;}
+
   .card {min-width: 180px;
     background-size: 180px 80%;
     margin-left:  12px;
     margin-right: 12px;
     position: relative;
-    top: 15%;
+    margin-top: 0px;
     min-height: 304px;
   background-repeat: no-repeat;}
 
@@ -316,18 +319,12 @@ width: 100%;
       width: 52%;
       }
 
-      .strengths {
- position: relative;
-padding-top: 29%; 
-       padding-left: 5%;
-        min-width: 100%;
-       }
 
 
       .strengthsHeader {
-        right: 95px;
+        right: 80px;
         white-space: nowrap;
-      bottom: 25%;}
+      top: 200px;}
 
       .typeTitle {        white-space: nowrap;
         width: 100%;
@@ -340,14 +337,22 @@ padding-top: 29%;
           margin-left: -0.5px;
           margin-right: 0px;}
 
+          .strengths {
+            position: relative;
+            bottom: -270px;  
+                  padding-left: 8%;
+                   min-width: 100%;
+                  }
+
+                  
           .weakness {position: relative;
-  bottom: -330px;
-        left: -190px;}
+             bottom: -185px;  
+        left: -180px;}
 
 .weakHeader {position: absolute;
             width: 316px;
             left: 1%;
-          top: 160%;}
+          top: 120%;}
   
           .weakness label{position: absolute;
             bottom: -10%;
