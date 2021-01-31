@@ -242,8 +242,16 @@ font-size: 16pt;
 form {position: relative;
 right: 10%;}
 
-footer     {position: relative;
-top: 140px;}
+.weak2:hover {max-height: 55px!important;
+  margin-left: -3px;
+  margin-right: -3px;
+margin-top: -5px;
+ }
+
+.strengths .weak2:hover { margin-top: -5px;
+margin-left: -3px;
+margin-right: -3px;}
+
   .alcremieGif {width: 30%;}
 
 
@@ -257,17 +265,18 @@ top: 140px;}
     margin-left:  12px;
     margin-right: 12px;
     position: relative;
-    top: 140px;
+    top: 15%;
     min-height: 304px;
   background-repeat: no-repeat;}
 
   .container  {overflow-x: hidden;}
 
   .evolvesFrom { position: relative;
+    z-index: -2;
 padding-top: 70%;
 right: 19%;}
 
-.evolvesFrom .nameTitle {padding-left: 30%;}
+.evolvesFrom .nameTitle {padding-left: 45%;}
 
 .evolutionImg {padding-left: 25%;}
   .header {
