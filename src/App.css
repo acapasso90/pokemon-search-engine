@@ -56,6 +56,8 @@ background-color: #e06464}
 
 .hidden {display: none;}
 
+.hiddenAbility {display: none;}
+.hiddenAbility2 {display: none;}
 .hidden2 {display: inherit;
 text-transform: lowercase;
 }

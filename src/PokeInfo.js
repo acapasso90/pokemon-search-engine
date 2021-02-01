@@ -101,7 +101,7 @@ function showEvolutionExtendedInfo(response){
 
 function showEvolutionInfo(response){
 let doesEvolve = response.data.evolves_from_species;
-if (doesEvolve != null){
+if (doesEvolve !== null){
     let evolutionName = response.data.evolves_from_species.name;
 const APIurl = `https://pokeapi.co/api/v2/pokemon/${evolutionName}`;
 axios.get(APIurl).then(showEvolutionExtendedInfo);}

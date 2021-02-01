@@ -4,7 +4,7 @@ import loading from "./loading.gif";
 import PokeInfo from "./PokeInfo.js";
 
 export default function PokeSearch(){
-const [pokemon, Setpokemon] = useState("alcremie");
+const [pokemon, Setpokemon] = useState("gengar");
 const [pokeinfo, Setpokeinfo] = useState("");
 const [loaded, setLoaded] = useState(false);
 const [loadedStatus, setLoadedStatus] = useState(" ");
