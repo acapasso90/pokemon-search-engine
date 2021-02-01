@@ -2,12 +2,10 @@ import React, {useEffect, useState} from "react";
 
 
 export default function ExtendedEvolutionInfo(props){
-    console.log(props.data)
     const official = "official-artwork";
     const loaded = props.data.loaded;
     const [pokePicture, setPokePicture] = useState("");
     const [pokeName, setPokeName] = useState("");
-
     useEffect(() => {
         let mounted = true;
         if (mounted){
@@ -24,5 +22,5 @@ if (loaded === "loaded" && props.data.info !== null){
     </div>
     )} 
     else if (loaded === "loaded" && props.data.info === null) {return(null)}
-    else {return(null);}
+    else {return("loading");}
 }
