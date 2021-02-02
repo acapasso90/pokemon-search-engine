@@ -10,6 +10,7 @@ body {font-size: 18pt;}
 ::selection {background-color: #9c0101;
 color: #e7d6d6;}
 
+#evolutionArrow {font-size: 60pt;}
 #stats p {text-transform: lowercase;}
 
 .evolutionrow {display: flex;
@@ -45,6 +46,8 @@ margin-bottom: 3px;}
 
 .container {width: 100vw;}
 
+.evolvesFrom {position: relative;
+top: 100px;}
 .evolvesFromHeader {width: 14%;
   white-space: nowrap;
 margin-left: auto;
@@ -82,7 +85,7 @@ background-size: 170% 170%;
 .ExtendedCards .pokePic  {min-width: 200px;
 min-height: 200px;}
 
-.ExtendedEvolvesFrom {margin-top: 8%;}
+.ExtendedEvolvesFrom {padding-top: 27%;}
 
 footer p {font-size: 20px;}
 .bug {background-image: url(./bug.png);}
@@ -415,8 +418,8 @@ width: 100%;
 /** PC sized **/
 @media only screen and (min-width: 1026px){
 
-  .evolutionrow .column {margin-left: 20%;
-    margin-right: 20%;}
+  .evolutionrow .column {margin-left: 12%;
+    margin-right: 12%;}
 
   .strengths {position: absolute;
     left: 50%;
