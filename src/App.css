@@ -11,6 +11,13 @@ body {font-size: 18pt;}
 color: #e7d6d6;}
 
 #stats p {text-transform: lowercase;}
+
+.evolutionrow {display: flex;
+flex-direction: row;
+width: 50%;
+position: relative;
+left: 94%;}
+
 .App {
   text-align: center;
 }
@@ -74,6 +81,8 @@ background-size: 170% 170%;
 
 .ExtendedCards .pokePic  {min-width: 200px;
 min-height: 200px;}
+
+.ExtendedEvolvesFrom {margin-top: 8%;}
 
 footer p {font-size: 20px;}
 .bug {background-image: url(./bug.png);}
@@ -240,9 +249,17 @@ font-size: 16pt;
 
 @keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
+/** Mobile Sized**/
 @media only screen and (max-width: 500px){
 form {position: relative;
 right: 10%;}
+
+.evolutionrow {display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+  left: 40%;}
+
 
 .weak2:hover {max-height: 55px!important;
   margin-left: -3px;
@@ -282,6 +299,11 @@ padding-top: 70%;
 right: 19%;}
 
 .evolvesFrom .nameTitle {padding-left: 45%;}
+
+
+.evolveHeader {padding-left: 45%;
+white-space: nowrap;}
+
 
 .evolutionImg {padding-left: 25%;}
   .header {
@@ -367,7 +389,7 @@ width: 100%;
 
  }
 
-
+/**Tablet Sized**/
 
 @media only screen and (max-width: 1025px) and (min-width: 501px){
 
@@ -392,6 +414,9 @@ width: 100%;
 }
 /** PC sized **/
 @media only screen and (min-width: 1026px){
+
+  .evolutionrow .column {margin-left: 20%;
+    margin-right: 20%;}
 
   .strengths {position: absolute;
     left: 50%;

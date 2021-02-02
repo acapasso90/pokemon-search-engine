@@ -44,10 +44,15 @@ export default function EvolutionInfo(props){
     if (loaded === "loaded" && props.data.info !== null){ 
         if (pokeInfo.info !== null){
     return(<div className="evolvesFrom">
+        <div className="evolutionrow">
+            <div className="column">
+            <i className="fas fa-long-arrow-alt-up"></i>
         <h2 className="evolvesFromHeader">Evolves from</h2>
         <img src={pokePicture} alt={pokeName} className="evolutionImg"/>
         <h2 className="nameTitle">{pokeName}</h2>
-        <ExtendedEvolutionInfo data={pokeInfo} /> </div>)}
+        </div>
+        <div className="column">
+        <ExtendedEvolutionInfo data={pokeInfo} /> </div></div></div>)}
         else { return(<div className="evolvesFrom">
         <h2 className="evolvesFromHeader">Evolves from</h2>
         <img src={pokePicture} alt={pokeName} className="evolutionImg"/>
