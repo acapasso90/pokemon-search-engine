@@ -3,7 +3,7 @@ import axios from "axios";
 import ExtendedEvolutionInfo from "./ExtendedEvolutionInfo";
 
 
-export default function EvolutionInfo(props){
+export default function PokeTypeEvolutionInfo(props){
     const official = "official-artwork";
     const loaded = props.data.loaded;
     const [pokePicture, setPokePicture] = useState("");
@@ -71,12 +71,12 @@ export default function EvolutionInfo(props){
    //If pokemon has evolved from another Pokemon (pokeInfo) ExtendedEvolutionInfo is displayed
         if (pokeInfo.info !== null){
     return(<div className="evolvesFrom">
-        <div className="evolutionrow">
+        <div className="extendedevolutionrow">
             <div className="column">
             <i className="fas fa-long-arrow-alt-up" id="evolutionArrow" style={upArrowStyle}></i>
         <h2 className="evolvesFromHeader">Evolves from</h2>
-        <img src={pokePicture} alt={pokeName} className="evolutionImg" id="firstEvolution"/>
-        <h2 className="nameTitle" id="firstEvolution">{pokeName}</h2>
+        <img src={pokePicture} alt={pokeName} className="evolutionImg" id="firstEvolutionByType"/>
+        <h2 className="nameTitle" id="firstEvolutionByType">{pokeName}</h2>
         </div>
         <div className="column">
         <i className={arrowIcon} id="evolutionArrow" style={arrowStyle}></i>

@@ -112,22 +112,27 @@ loaded: "loaded",})}}
 useEffect(() => {
     let mounted = true;
     const cancelTokenSource = axios.CancelToken.source();
+    //Sets ability information with 2 abilities for PokeAbilities.js and loaded status
     if (mounted) { if (abilityList.length >1) {setAbilityInfo({abilityHere: props.data.abilities[0].ability.name,
       isHiddenHere: props.data.abilities[0].is_hidden,
       abilityListHere: props.data.abilities,
       ability2Here: props.data.abilities[1].ability.name,
       isHidden2Here: props.data.abilities[1].is_hidden,
     loaded: "loaded",})}
+        //Sets 1 ability information for PokeAbilities.js and loaded status
     else {setAbilityInfo({abilityHere: props.data.abilities[0].ability.name,
       isHiddenHere: props.data.abilities[0].is_hidden,
       abilityListHere: props.data.abilities,
     loaded: "loaded",})};
+        //Axios makes request using set evolutionURL
       axios.get(evolutionURL, {
         cancelToken: cancelTokenSource.token
       }).then(showEvolutionInfo);}
+          //Cancels axios request
     return function cleanup() {
       mounted = false
       cancelTokenSource.cancel();
+      //runs everytime evolutionURL changes
   }}, [evolutionURL]);
 
   useEffect(() => {
@@ -176,8 +181,6 @@ useEffect(() => {
          if (type === "poison" || type2 === "poison"){ground.classList.add("weak2"); psychic.classList.add("weak2"); grass2.classList.add("weak2"); fairy2.classList.add("weak2");}
          if (type === "rock" || type2 === "rock"){fighting.classList.add("weak2"); ground.classList.add("weak2"); steel.classList.add("weak2"); water.classList.add("weak2"); grass.classList.add("weak2"); flying2.classList.add("weak2"); bug2.classList.add("weak2"); fire2.classList.add("weak2"); ice2.classList.add("weak2"); }
          if (type === "steel" || type2 === "steel"){fighting.classList.add("weak2"); ground.classList.add("weak2"); fire.classList.add("weak2"); rock2.classList.add("weak2"); ice2.classList.add("weak2"); fairy2.classList.add("weak2");}
-      //effecitve against type icons on change
-
     //adds card stylying on change 
  else   if (type === "water") {card.classList.add('water'); shinyCard.classList.add('water');} 
 else if (type === "bug"){card.classList.add('bug'); shinyCard.classList.add('bug');} 
@@ -197,6 +200,7 @@ else if (type === "dragon") {card.classList.add('dragon'); shinyCard.classList.a
 else if (type === "dark"){ card.classList.add('darkness'); shinyCard.classList.add('darkness');} 
 else {card.classList.add('fighting'); shinyCard.classList.add('fighting');}
 }}
+// runs everytime pokemon types change
 , [type, type2]);
 
 if (loaded === "loaded"){
@@ -219,7 +223,6 @@ if (loaded === "loaded"){
   if (type === "poison" || type2 === "poison"){ground.classList.add("weak2"); psychic.classList.add("weak2"); grass2.classList.add("weak2"); fairy2.classList.add("weak2");}
   if (type === "rock" || type2 === "rock"){fighting.classList.add("weak2"); ground.classList.add("weak2"); steel.classList.add("weak2"); water.classList.add("weak2"); grass.classList.add("weak2"); flying2.classList.add("weak2"); bug2.classList.add("weak2"); fire2.classList.add("weak2"); ice2.classList.add("weak2"); }
   if (type === "steel" || type2 === "steel"){fighting.classList.add("weak2"); ground.classList.add("weak2"); fire.classList.add("weak2"); rock2.classList.add("weak2"); ice2.classList.add("weak2"); fairy2.classList.add("weak2");}
-
     // adds Card styling based on type
 if (type === "water") {card.classList.add('water'); shinyCard.classList.add('water');} 
 if (type === "bug"){card.classList.add('bug'); shinyCard.classList.add('bug');} 
@@ -238,10 +241,9 @@ if (type === "normal" || type === "flying"){card.classList.add('normal'); shinyC
  if (type === "dragon") {card.classList.add('dragon'); shinyCard.classList.add('dragon');}
  if (type === "dark"){ card.classList.add('darkness'); shinyCard.classList.add('darkness');} 
 if (type === "fighting") {card.classList.add('fighting'); shinyCard.classList.add('fighting');}
-
 }
 
-
+// Shiny pokemon card, 2 pokemon types, and only 1 ability
 if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
     return(<div className="pokeInfo">
              <h2 className="nameTitle">{pokename}</h2>
@@ -327,6 +329,7 @@ if (shinyIcon !== null && abilityList.length <= 1 && type2 !== null ){
 </div></div>
     </div>    )}
 
+// Shiny pokemon card, 1 pokemon type, and 2 abilites
 
 else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {return(<div className="pokeInfo">
            <h2 className="nameTitle">{pokename}</h2>
@@ -413,91 +416,7 @@ else if (type2 === null && shinyIcon !== null && abilityList.length > 1  ) {retu
 </div></div>
     </div> )}
 
-    else if (abilityList.length < 1 ) {return(<div className="pokeInfo">
-       <h2 className="nameTitle">{pokename}</h2>
-         <img src={pokePicture} className="officialImg" alt="officialArtwork" />
-    <div className="right">
-        <div className="column" id="stats">
-        <h3>Base Stats</h3>
-        <p> <b>{stat1name} </b>: {stat1} </p> 
-      <p><b> {stat2name}</b> : {stat2} </p>
-      <p> <b> {stat3name}</b> : {stat3} </p>
-      <p><b>{stat4name}</b>: {stat4} </p>
-      <p><b>{stat5name}</b> : {stat5} </p>
-      <p><b>{stat6name}</b> : {stat6} </p>
-        </div>
-    </div>
-                <div id="pokeNameRow">
-            <div className="pokeType">
-            <h2 className="typeTitle">   {type} type </h2>
-            <b><p className="weakHeader">Weak Against</p></b>
-      <div className="weakness">
-        <div className="row2">
-      <div className="bugAttribute">  
-      <img src={bugIcon} alt="bug" className="bugIcon" /><label className="hidden" id="hiddenBug">Bug</label></div>
-      <div className="darkAttribute">     <img src={darkIcon} alt="dark" className="darkIcon" /><label className="hidden" id="hiddenDark">Dark</label></div>
-      <div className="dragonAttribute">   <img src={dragonIcon} alt="dragon" className="dragonIcon" />  <label className="hidden" id="hiddenDragon">Dragon</label></div>
-       <div className="electricAttribute">  <img src={electricIcon} alt="electric" className="electricIcon" /><label className="hidden" id="hiddenElectric">Electric</label> </div>
-       <div className="waterAttribute"> <img src={waterIcon} alt="water" className="waterIcon" /><label className="hidden" id="hiddenWater">Water</label></div>
-    <div className="fairyAttribute">   <img src={fairyIcon} alt="fairy" className="fairyIcon" /><label className="hidden" id="hiddenFairy">Fairy</label></div>
-      <div className="fightingAttribute">  <img src={fightingIcon} alt="fighting" className="fightingIcon"/><label className="hidden" id="hiddenFighting">Fighting</label> </div>
-      <div className="fireAttribute"> <img src={fireIcon} alt="fire" className="fireIcon"/><label className="hidden" id="hiddenFire">Fire</label> </div>
-      <div className="flyingAttribute">  <img src={flyingIcon} alt="flying" className="flyingIcon"/><label className="hidden" id="hiddenFlying">Flying</label></div>
-      <div className="grassAttribute"> <img src={grassIcon} alt="grass" className="grassIcon"/> <label className="hidden" id="hiddenGrass">Grass</label></div>
-      <div className="ghostAttribute"> <img src={ghostIcon} alt="ghost" className="ghostIcon" /> <label className="hidden" id="hiddenGhost">Ghost</label></div>
-      <div className="groundAttribute"> <img src={groundIcon} alt="ground" className="groundIcon" /><label className="hidden" id="hiddenGround">Ground</label></div>
-      <div className="iceAttribute">  <img src={iceIcon} alt="ice"  className="iceIcon"/><label className="hidden" id="hiddenIce">Ice</label></div>
-      <div className="normalAttribute">  <img src={normalIcon} alt="normal" className="normalIcon"/><label className="hidden" id="hiddenNormal">Normal</label></div>
-      <div className="poisonAttribute">  <img src={poisonIcon} alt="poison" className="poisonIcon" /> <label className="hidden" id="hiddenPoison">Poison</label></div>
-      <div className="psychicAttribute"> <img src={psychicIcon} alt="psychic" className="psychicIcon"/> <label className="hidden" id="hiddenPsychic">Psychic</label></div>
-      <div className="rockAttribute">  <img src={rockSymbol} alt="rock" className="rockSymbol"/><label className="hidden" id="hiddenRock">Rock</label></div>
-    <div className="steelAttribute">    <img src={steelIcon} alt="steel" className="steelIcon"/><label className="hidden" id="hiddenSteel">Steel</label></div>
-  </div>
-  </div>
-        </div>
-        <div className="right">
-        <b><p className="strengthsHeader">Effective Against</p></b>
-  <div className="strengths">
-  <div className="row2">
-        <div className="bugAttribute">  
-      <img src={bugIcon} alt="bug" className="bugIconStr" /><label className="hidden" id="hiddenBug">Bug</label></div>
-      <div className="darkAttribute">     <img src={darkIcon} alt="dark" className="darkIconStr" /><label className="hidden" id="hiddenDark">Dark</label></div>
-      <div className="dragonAttribute">   <img src={dragonIcon} alt="dragon" className="dragonIconStr" />  <label className="hidden" id="hiddenDragon">Dragon</label></div>
-       <div className="electricAttribute">  <img src={electricIcon} alt="electric" className="electricIconStr" /><label className="hidden" id="hiddenElectric">Electric</label> </div>
-       <div className="waterAttribute"> <img src={waterIcon} alt="water" className="waterIconStr" /><label className="hidden" id="hiddenWater">Water</label></div>
-    <div className="fairyAttribute">   <img src={fairyIcon} alt="fairy" className="fairyIconStr" /><label className="hidden" id="hiddenFairy">Fairy</label></div>
-      <div className="fightingAttribute">  <img src={fightingIcon} alt="fighting" className="fightingIconStr"/><label className="hidden" id="hiddenFighting">Fighting</label> </div>
-      <div className="fireAttribute"> <img src={fireIcon} alt="fire" className="fireIconStr"/><label className="hidden" id="hiddenFire">Fire</label> </div>
-      <div className="flyingAttribute">  <img src={flyingIcon} alt="flying" className="flyingIconStr"/><label className="hidden" id="hiddenFlying">Flying</label></div>
-      <div className="grassAttribute"> <img src={grassIcon} alt="grass" className="grassIconStr"/> <label className="hidden" id="hiddenGrass">Grass</label></div>
-      <div className="ghostAttribute"> <img src={ghostIcon} alt="ghost" className="ghostIconStr" /> <label className="hidden" id="hiddenGhost">Ghost</label></div>
-      <div className="groundAttribute"> <img src={groundIcon} alt="ground" className="groundIconStr" /><label className="hidden" id="hiddenGround">Ground</label></div>
-      <div className="iceAttribute">  <img src={iceIcon} alt="ice"  className="iceIconStr"/><label className="hidden" id="hiddenIce">Ice</label></div>
-      <div className="normalAttribute">  <img src={normalIcon} alt="normal" className="normalIconStr"/><label className="hidden" id="hiddenNormal">Normal</label></div>
-      <div className="poisonAttribute">  <img src={poisonIcon} alt="poison" className="poisonIconStr" /> <label className="hidden" id="hiddenPoison">Poison</label></div>
-      <div className="psychicAttribute"> <img src={psychicIcon} alt="psychic" className="psychicIconStr"/> <label className="hidden" id="hiddenPsychic">Psychic</label></div>
-      <div className="rockAttribute">  <img src={rockSymbol} alt="rock" className="rockSymbolStr"/><label className="hidden" id="hiddenRock">Rock</label></div>
-    <div className="steelAttribute">    <img src={steelIcon} alt="steel" className="steelIconStr"/><label className="hidden" id="hiddenSteel">Steel</label></div>
-  </div>
-  </div>
-  </div>
-  </div>
-    <EvolutionInfo data={pokeInfo} />
-    <div className="row" id="cardRow">
-    <div className="card" id="card"> 
-    <h3 className="pokeName">{pokename}</h3> <img src={regularIcon} className="icon" alt="icon" />
-    <div className="abilityHeader"> Abilities </div> 
-    <PokeAbilities data={abilityInfo} />
-  </div>
-    <div className="card" id="card2">
-    <h3 className="pokeName">Shiny {pokename}</h3>
-    <img src={shinyIcon} className="icon" alt="shiny" /> 
-    <div className="abilityHeader"> Abilities </div> 
-    <PokeAbilities data={abilityInfo} />
-</div></div>
-    </div>  )}
-
-
+// Shiny pokemon card, 2 pokemon types, and 2 abilities
 else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {return(<div className="pokeInfo">
              <h2 className="nameTitle">{pokename}</h2>
          <img src={pokePicture} className="officialImg" alt="officialArtwork" />
@@ -582,6 +501,7 @@ else if (type2 !== null && shinyIcon !== null && abilityList.length > 1  ) {retu
 </div></div>
     </div> )}
 
+// Shiny icon, 1 type, 1 ability
 else { return(<div className="pokeInfo">
         <h2 className="nameTitle">{pokename}</h2>
          <img src={pokePicture} className="officialImg" alt="officialArtwork" />

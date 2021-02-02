@@ -14,14 +14,17 @@ function showExtendedInfo(response){
     Setpokeinfo({
         type: response.data.types[0].type.name,
         type2: response.data.types[1].type.name,
+        evolutionURL: response.data.species.url,
         name: response.data.name,
         pokePicture: response.data.sprites.other.[official].front_default,
         shinySprite: response.data.sprites.front_shiny,
         loaded: "loaded",
     })}
+
     else { Setpokeinfo({
         type: response.data.types[0].type.name,
         name: response.data.name,
+        evolutionURL: response.data.species.url,
         pokePicture: response.data.sprites.other.[official].front_default,
         shinySprite: response.data.sprites.front_shiny,
         loaded: "loaded",
