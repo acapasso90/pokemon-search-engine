@@ -56,7 +56,7 @@ export default function EvolutionInfo(props){
           };
           window.addEventListener('resize', resizeListener);
           if (width < 500){setArrowIcon("fas fa-long-arrow-alt-up");
-          setArrowStyle({paddingTop: "0%",});
+          setArrowStyle({paddingTop: "0%", paddingLeft: "92%"});
           setUpArrowStyle({paddingLeft: "92%"});}
           else{setArrowIcon("fas fa-long-arrow-alt-left");
           setArrowStyle({paddingTop: "450%",});
