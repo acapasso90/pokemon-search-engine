@@ -10,8 +10,8 @@ export default function PokeTypeEvolutionInfo(props){
     const [pokeName, setPokeName] = useState("");
     const [pokeInfo, setPokeInfo] = useState("");
     const [arrowIcon, setArrowIcon] = useState("");
-    const [arrowStyle, setArrowStyle] = useState("");
-    const [upArrowStyle, setUpArrowStyle] = useState("");
+    const arrowStyle = {position: "relative", bottom: "-45%" }
+    const upArrowStyle = {position: "relative", left: "30%"}
 // Sets pokeinfo to response.data and sends "loaded" status to ExtendedEvolution.js
     function showEvolutionExtendedInfo(response){
         setPokeInfo({info: response.data,
@@ -56,11 +56,9 @@ export default function PokeTypeEvolutionInfo(props){
           };
           window.addEventListener('resize', resizeListener);
           if (width < 500){setArrowIcon("fas fa-long-arrow-alt-up");
-          setArrowStyle({paddingTop: "0%",});
-          setUpArrowStyle({paddingLeft: "92%"});}
+          }
           else{setArrowIcon("fas fa-long-arrow-alt-left");
-          setArrowStyle({paddingTop: "450%",});
-          setUpArrowStyle({paddingLeft: "52%"});}
+          }
           return () => {
             window.removeEventListener('resize', resizeListener);
           }
@@ -73,13 +71,13 @@ export default function PokeTypeEvolutionInfo(props){
     return(<div className="evolvesFrom">
         <div className="extendedevolutionrow">
             <div className="column">
-            <i className="fas fa-long-arrow-alt-up" id="evolutionArrow" ></i>
+            <i className="fas fa-long-arrow-alt-up" id="evolutionArrow" style={upArrowStyle} ></i>
         <h2 className="evolvesFromHeader">Evolves from</h2>
         <img src={pokePicture} alt={pokeName} className="evolutionImg" id="firstEvolutionByType"/>
         <h2 className="nameTitle" id="firstEvolutionByType">{pokeName}</h2>
         </div>
         <div className="column">
-        <i className={arrowIcon} id="evolutionArrow"></i>
+        <i className={arrowIcon} id="evolutionArrow" style={arrowStyle}></i>
         </div>
         <div className="column">
         <ExtendedEvolutionInfo data={pokeInfo} /> </div></div></div>)}

@@ -44,7 +44,7 @@ useEffect(() => {
 
 
 
-      return(<div className="extendedCards">
+      return(<div className="extendedCards" key={pokeinfo}>
           <ExtendedCards data={pokeinfo} />
       </div>)
 

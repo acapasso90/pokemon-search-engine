@@ -35,10 +35,10 @@ bottom: 30px;}
 flex-direction: row;
 justify-content: center;}
 
-.extendedevolutionrow .column {margin-left: 8%;
-margin-right: 7%;
+.extendedevolutionrow .column {margin-left: 6%;
+margin-right: 6%;
 position: relative;
-right: 5%;}
+right: 1%;}
 
 .ExtendedCards .evolvesFrom  {position: relative;
 top: -80px;
@@ -124,7 +124,7 @@ background-size: 170% 170%;
   min-height: 220px;
 max-height: 300px;}
 
-.ExtendedEvolvesFrom {padding-top: 25%;}
+.ExtendedEvolvesFrom {padding-top: 37%;}
 
 footer p {font-size: 20px;}
 .bug {background-image: url(./bug.png);}

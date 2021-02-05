@@ -5,7 +5,6 @@ import PokeTypeEvolutionInfo from "./PokeTypeEvolutionInfo.js";
 
 export default function ExtendedCards(props){
 let pokename = props.data.name;
-let nameType = props.type;
 let type = props.data.type;
 let type2 = props.data.type2;
 let pokePicture = props.data.pokePicture;
