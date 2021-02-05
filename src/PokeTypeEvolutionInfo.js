@@ -73,13 +73,13 @@ export default function PokeTypeEvolutionInfo(props){
     return(<div className="evolvesFrom">
         <div className="extendedevolutionrow">
             <div className="column">
-            <i className="fas fa-long-arrow-alt-up" id="evolutionArrow" style={upArrowStyle}></i>
+            <i className="fas fa-long-arrow-alt-up" id="evolutionArrow" ></i>
         <h2 className="evolvesFromHeader">Evolves from</h2>
         <img src={pokePicture} alt={pokeName} className="evolutionImg" id="firstEvolutionByType"/>
         <h2 className="nameTitle" id="firstEvolutionByType">{pokeName}</h2>
         </div>
         <div className="column">
-        <i className={arrowIcon} id="evolutionArrow" style={arrowStyle}></i>
+        <i className={arrowIcon} id="evolutionArrow"></i>
         </div>
         <div className="column">
         <ExtendedEvolutionInfo data={pokeInfo} /> </div></div></div>)}

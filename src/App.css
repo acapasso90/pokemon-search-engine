@@ -14,8 +14,10 @@ color: #e7d6d6;}
 #firstEvolution {position: relative;
 left: 18%;}
 
-#firstEvolutionByType
-#evolutionArrow {font-size: 60pt;}
+#evolutionArrow {font-size: 60pt;
+  max-height: 100px;
+  padding-top: 0!important;}
+
 
 #evolutionArrowSingle {font-size: 60pt;
   padding-top: 5%;
@@ -26,6 +28,15 @@ left: 25%;}
 left: 19%;
 bottom: 30px;}
 #stats p {text-transform: lowercase;}
+
+.extendedevolutionrow {display: flex;
+flex-direction: row;}
+
+.ExtendedCards .evolvesFrom  {position: relative;
+top: -80px;
+left: -0.002%;}
+
+.ExtendedCards .pokeName {  font-size: 40pt;}
 
 .evolutionrow {display: flex;
 flex-direction: row;
@@ -277,7 +288,9 @@ right: 10%;}
   left: 40%;}
 
   #evolutionArrow {font-size: 60pt;
-    left: 18%;}
+    left: 18%;
+  max-height: 100px;
+padding-top: 0!important;}
 
 #evolutionArrowSingle {font-size: 60pt;
   left: 18%;
