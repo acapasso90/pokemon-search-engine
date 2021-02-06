@@ -42,11 +42,12 @@ export default function PokeSearch(){
     if(loaded){
         return(
             <div className="PokeSearch">
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit}>
         <input type="text" onChange={setPokemon} placeholder="Search by Pokémon Type" 
         className="searchBar" />
         <input type="submit" placeholder="Submit" className="submitButton" />
         </form>
+        <h4>Current type: {pokemonType} </h4>
         {pokeinfo.slice(0, arrayLength).map(function(pokemonNumber){
             return(<ExtendedPokeInfo data={pokemonNumber.pokemon.url} type={nameType} loading={loadedStatus}/>)})}
             </div>)}

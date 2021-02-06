@@ -15,7 +15,7 @@ function App() {
         <p>
        Hey chat! We're building a Pokémon Search Engine together today 🍓 
         </p>
-        <PokeSearch />
+        <ExtendedPokeSearch />
       </header>    </div>
       <Footer />
     </div>
