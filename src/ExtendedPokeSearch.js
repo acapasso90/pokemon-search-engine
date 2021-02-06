@@ -12,7 +12,8 @@ export default function PokeSearch(){
     const [pokeinfo, Setpokeinfo] = useState("");
     const [loaded, setLoaded] = useState(false);
     const [loadedStatus, setLoadedStatus] = useState(" ");
-    
+
+// Sets pokemon name, length of array in that pokemon type, and pokemonType
     function setInfo(response){
       setNameType(response.data.name);
         Setpokeinfo(response.data.pokemon);
@@ -20,25 +21,26 @@ export default function PokeSearch(){
     setLoaded(true);
     setLoadedStatus("loaded");
     }
-    
+
+// Sets pokemonType to lowercase search input then runs extendedSearch with new value
     function handleSubmit(event){  event.preventDefault();
         setPokemonType(pokemonTypeReady);
-        const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
-    axios.get(APIurl).then(setInfo);
+        extendedSearch();
     }
     
-    
+// Sets search input to lowercase and sets that lowercase value to pokemonTypeLowercase
     function setPokemon(event){
         event.preventDefault();
        const pokemonTypeLowercase = (event.target.value).toLowerCase();
        setPokemonTypeReady(pokemonTypeLowercase);
     }
     
+// Axios makes APIrequest with pokemonType as search parameter
     function extendedSearch() {
         const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
     axios.get(APIurl).then(setInfo);}
     
-    
+// if Loaded displays search bars and pokemon of default type set in useState. Runs loops for as long as arrayLength is to display extendedPokeinfo.
     if(loaded){
         return(
             <div className="PokeSearch">
