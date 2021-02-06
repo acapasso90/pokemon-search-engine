@@ -124,7 +124,7 @@ background-size: 170% 170%;
   min-height: 220px;
 max-height: 300px;}
 
-.ExtendedEvolvesFrom {padding-top: 37%;}
+.ExtendedEvolvesFrom {padding-top: 30%;}
 
 footer p {font-size: 20px;}
 .bug {background-image: url(./bug.png);}
@@ -154,10 +154,15 @@ color: #ffffff;}
   width: 327px;
 margin-right: 22%;}
 
-.evolutionImg {max-width: 210px;
+.PokeTypeEvolution .evolutionImg {max-width: 210px;
   min-width: 200px;
   min-height: 200px;
 max-height: 210px;}
+
+.evolutionImg {max-width: 270px;
+  min-width: 200px;
+  min-height: 200px;
+max-height: 270px;}
 
 
 .pokeName {text-transform: capitalize;
@@ -479,7 +484,7 @@ height: 330px;
 @media only screen and (min-width: 1026px){
 
 
-  .evolutionrow .column {margin-left: 18%;
+  .evolutionrow .column {margin-left: 21%;
     margin-right: 1%;}
 
   .strengths {position: absolute;

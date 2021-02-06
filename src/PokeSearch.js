@@ -32,7 +32,7 @@ axios.get(APIurl).then(setInfo);}
 
 // once loaded shows input forms and displays PokeInfo from default search
 if(loaded){return(
-        <div className="PokeSearch" key={pokemon}>
+        <div className="PokeSearch" key={pokeinfo}>
     <form onSubmit={handleSubmit} >
     <input type="text" onChange={setPokemon} placeholder="Type a Pokémon Name" 
     className="searchBar" />

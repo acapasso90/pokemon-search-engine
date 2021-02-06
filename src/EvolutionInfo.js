@@ -59,8 +59,8 @@ export default function EvolutionInfo(props){
           setArrowStyle({paddingTop: "0%", paddingLeft: "92%"});
           setUpArrowStyle({paddingLeft: "92%"});}
           else{setArrowIcon("fas fa-long-arrow-alt-left");
-          setArrowStyle({paddingTop: "450%",});
-          setUpArrowStyle({paddingLeft: "52%"});}
+          setArrowStyle({position: "relative", top: "40.5%", left: "25%",});
+          setUpArrowStyle({paddingLeft: "65%", position: "relative", top: "-1.5%"});}
           return () => {
             window.removeEventListener('resize', resizeListener);
           }
