@@ -220,7 +220,7 @@ margin-top: -1%;}
     .pokeInfo .column {display: flex;
       flex-direction: column;
       position: relative;
-      left: -175%;
+      left: -160%;
 }
     
     
@@ -323,11 +323,11 @@ right: 10%;}
 padding-top: 0!important;}
 
 #evolutionArrowSingle {font-size: 60pt;
-  left: 18%;
+  left: 16%;
   }
 
   #evolveName {position: relative;
-left: -10px;
+left: -20px;
 bottom: 30px;}
 
   #firstEvolution {position: relative;
@@ -373,7 +373,8 @@ right: 19%;}
 
 .evolvesFrom .nameTitle {padding-left: 45%;}
 
-.evolvesFromHeader {padding-left: 44px;}
+.evolvesFromHeader {position: relative;
+left: -5px;}
 
 .evolveHeader {padding-left: 45%;
 white-space: nowrap;}
@@ -390,13 +391,15 @@ left: 30px; }
   background-color: #e06464}
 
 
+.nameTitle {position: relative;
+right: 3%;}
 
   .officialImg {height: 55%;
     width: 55%;
-  margin-left: 8%;}
+  margin-left: 9%;}
 
     .pokeInfo .column {
-      left: -46%;
+      left: -38%;
     margin-top: -0.05%;}
 
     
@@ -424,14 +427,14 @@ height: 330px;
 
 
       .strengthsHeader {
-        right: 80px;
+        right: 78px;
         white-space: nowrap;
       top: 200px;}
 
       .typeTitle { 
         width: 80%;
         position: relative;
-        left: -30%;
+        left: -31.5%;
       top: 40px;}
 
 
@@ -442,18 +445,18 @@ height: 330px;
           .strengths {
             position: relative;
             bottom: -270px;  
-                  padding-left: 8%;
+                  padding-left: 7%;
                    min-width: 100%;
                   }
 
                   
           .weakness {position: relative;
-             bottom: -120px;  
-        left: -180px;}
+             bottom: -105px;  
+        left: -170px;}
 
 .weakHeader {position: absolute;
             width: 316px;
-            left: 1%;
+            left: -1.5%;
           top: 120%;}
   
           .weakness label{position: absolute;
