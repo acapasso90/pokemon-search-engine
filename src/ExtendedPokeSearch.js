@@ -7,7 +7,6 @@ import ExtendedPokeInfo from "./ExtendedPokeInfo.js"
 export default function PokeSearch(){
     const [pokemonType, setPokemonType] = useState("dark");
     const [nameType, setNameType] = useState("");
-    const [pokemonTypeReady, setPokemonTypeReady] = useState("");
     const [arrayLength, setArrayLength] = useState("");
     const [pokeinfo, Setpokeinfo] = useState("");
     const [loaded, setLoaded] = useState(false);
@@ -24,7 +23,6 @@ export default function PokeSearch(){
 
 // Sets pokemonType to lowercase search input then runs extendedSearch with new value
     function handleSubmit(event){  event.preventDefault();
-        setPokemonType(pokemonTypeReady);
         extendedSearch();
     }
     
@@ -32,12 +30,11 @@ export default function PokeSearch(){
     function setPokemon(event){
         event.preventDefault();
        const pokemonTypeLowercase = (event.target.value).toLowerCase();
-       setPokemonTypeReady(pokemonTypeLowercase);
+       setPokemonType(pokemonTypeLowercase);
     }
     
 // Axios makes APIrequest with pokemonType as search parameter
-    function extendedSearch() {
-        const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
+    function extendedSearch() { const APIurl = `https://pokeapi.co/api/v2/type/${pokemonType}`;
     axios.get(APIurl).then(setInfo);}
     
 // if Loaded displays search bars and pokemon of default type set in useState. Runs loops for as long as arrayLength is to display extendedPokeinfo.
@@ -49,7 +46,7 @@ export default function PokeSearch(){
         className="searchBar" />
         <input type="submit" placeholder="Submit" className="submitButton" />
         </form>
-        <h4>Current type: {pokemonType} </h4>
+        <h4>Current type: {nameType} </h4>
         {pokeinfo.slice(0, arrayLength).map(function(pokemonNumber){
             return(<ExtendedPokeInfo data={pokemonNumber.pokemon.url} type={nameType} loading={loadedStatus}/>)})}
             </div>)}
