@@ -40,7 +40,7 @@ export default function PokeSearch(){
 // if Loaded displays search bars and pokemon of default type set in useState. Runs loops for as long as arrayLength is to display extendedPokeinfo.
     if(loaded){
         return(
-            <div className="PokeSearch">
+            <div className="ExtendedPokeSearch">
         <form onSubmit={handleSubmit}>
         <input type="text" onChange={setPokemon} placeholder="Search by Pokémon Type" 
         className="searchBar" />

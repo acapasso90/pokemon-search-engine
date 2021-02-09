@@ -7,6 +7,8 @@ color: #610202;}
 
 body {font-size: 18pt;}
 
+form {position: relative;
+left: -38px;}
 ::selection {background-color: #9c0101;
 color: #e7d6d6;}
 
@@ -29,7 +31,19 @@ left: 25%;}
 #evolveName {position: relative;
 left: 19%;
 bottom: 30px;}
+
 #stats p {text-transform: lowercase;}
+
+#dropdown-button-drop-right {position: absolute;
+left: 10%;
+z-index: 2;
+background-color: #9c0101;
+      color: #e7d6d6;
+    border: 3px solid #4b0000;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 15pt;
+    height: 40px;}
 
 .extendedevolutionrow {display: flex;
 flex-direction: row;
@@ -83,7 +97,8 @@ margin-bottom: 3px;}
 .container {width: 100vw;}
 
 .dropdownColumn {display: flex;
-flex-direction: column;}
+flex-direction: column;
+border: 1px solid black;}
 
 .extendedCards {background-color: #f1f1f1;
   width: 90%;
@@ -233,6 +248,8 @@ margin-top: -1%;}
       width: 20%;
       font-size: 15pt;
     margin-right: 2px;}
+
+    .ExtendedPokeSearch .searchBar {width: 27%;}
     
     .statTitle {font-weight: bold;}
     
