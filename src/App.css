@@ -82,6 +82,8 @@ margin-bottom: 3px;}
 
 .container {width: 100vw;}
 
+.dropdownColumn {display: flex;
+flex-direction: column;}
 
 .extendedCards {background-color: #f1f1f1;
   width: 90%;
