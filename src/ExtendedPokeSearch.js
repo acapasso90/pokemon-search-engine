@@ -50,7 +50,8 @@ export default function PokeSearch(){
         {pokeinfo.slice(0, arrayLength).map(function(pokemonNumber){
             return(<ExtendedPokeInfo data={pokemonNumber.pokemon.url} type={nameType} loading={loadedStatus}/>)})}
             </div>)}
-    
+
+// if not Loaded displays pokeball with "loading" message
     else{ extendedSearch();
         return(
     <div className="loading">
