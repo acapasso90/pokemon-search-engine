@@ -29,7 +29,7 @@ position: relative;
 left: 25%;}
 
 #evolveName {position: relative;
-left: 19%;
+left: 23%;
 bottom: 30px;}
 
 #stats p {text-transform: lowercase;}
@@ -69,7 +69,7 @@ left: -0.002%;}
 flex-direction: row;
 width: 50%;
 position: relative;
-left: 94%;}
+left: 28%;}
 
 .App {
   text-align: center;
@@ -88,7 +88,7 @@ min-height: 414px;
 max-height: 414px;
 min-width: 294px;
 max-width: 294px;
-margin: 100px 155px 40px 155px;
+margin: 100px 115px 40px 115px;
 border-radius: 5%;
 }
 .column p {margin-top: 3px;
@@ -178,7 +178,7 @@ color: #ffffff;}
   min-height: 327px;
   min-width: 327px;
   width: 327px;
-margin-right: 22%;}
+margin-right: 21%;}
 
 .PokeTypeEvolution .evolutionImg {max-width: 210px;
   min-width: 200px;
@@ -200,7 +200,7 @@ max-height: 270px;}
   .nameTitle {text-transform: capitalize;
   font-size: 40pt;
   text-align: left;
-  width: 50%;
+  width: 65%;
   margin-left: auto;
 margin-right: auto;
 }
@@ -237,7 +237,7 @@ margin-top: -1%;}
     .pokeInfo .column {display: flex;
       flex-direction: column;
       position: relative;
-      left: -160%;
+      left: -65%;
 }
     
     
@@ -257,8 +257,8 @@ margin-top: -1%;}
       width: 40%;}
     
       .strengthsHeader {position: absolute;
-      right: 24%;
-    bottom: -41.5%;}
+      right: 26.5%;
+    bottom: -41.6%;}
     
     .submitButton {background-color: #9c0101;
       color: #e7d6d6;
@@ -274,7 +274,7 @@ margin-top: -1%;}
     .submitButton:hover {background-color: #e7d6d6;
       color: #9c0101;}
     
-    .typeTitle {padding-right: 14.5%;}
+    .typeTitle {padding-right: 28.5%;}
 
     .weakness {
       min-width: 90%;
@@ -286,7 +286,7 @@ margin-top: -1%;}
     margin-right: 10px;}
 
     .weak2:hover {max-height: 55px!important;
-      margin-left: 7.8px;
+      margin-left: 7.1px;
     margin-right:  7.8px;
      }
 
@@ -321,7 +321,7 @@ font-size: 16pt;
   .weak2 {display: inherit!important;}
 
   .weakHeader {position: relative;
-  right: 7%;}
+  right: 15%;}
 
 @keyframes button { from {background-color: #9c0101; color: #e7d6d6; } to {background-color: #e7d6d6;   color: #9c0101; } }
 
@@ -520,10 +520,10 @@ height: 330px;
     margin-right: 1%;}
 
   .strengths {position: absolute;
-    left: 50%;
+    left: 47.5%;
   bottom: -48%;}
 
 
   .weakness {position: absolute;
-  left: -3%;}
+  left: -10.5%;}
 }
