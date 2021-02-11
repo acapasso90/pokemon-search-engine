@@ -7,11 +7,11 @@ export default function PokeSearch(){
 const [pokemon, Setpokemon] = useState("alcremie");
 const [pokeinfo, setPokeinfo] = useState("");
 const [pokeType, setPokeType] = useState("");
-const [borderColor, setBorderColor] = useState("");
 const [loaded, setLoaded] = useState(false);
+const [borderStyle, setBorderStyle] = useState("");
 const [loadedStatus, setLoadedStatus] = useState(" ");
-const borderstyle = {border: `7px solid ${borderColor}`,}
-// sets Pokemon iinfo and sets loaded status for PokeInfo.js
+
+// sets Pokemon info and sets loaded status for PokeInfo.js
 function setInfo(response){
     setPokeinfo(response.data)
     setPokeType(response.data.types[0].type.name);
@@ -37,22 +37,38 @@ function searchPokemon () {    const APIurl = `https://pokeapi.co/api/v2/pokemon
 axios.get(APIurl).then(setInfo);}
 
 
+const fairyBorder = {borderTop: "7px solid #e87a9c", borderBottom: "7px solid #e87a9c", borderRight: "200px solid #e87a9c", borderLeft: "200px solid #e87a9c",};
+const poisonBorder = {borderTop: "7px solid #800fc1", borderBottom: "7px solid #800fc1", borderRight: "200px solid #800fc1", borderLeft: "200px solid #800fc1",};
+const waterBorder = {border: "7px solid #1078c0", borderWidth: "7px 200px",};
+const groundBorder = {border: "7px solid #872619", borderWidth: "7px 200px",};
+const rockBorder = {border: "7px solid #5b4231", borderWidth: "7px 200px",};
+const fightingBorder = {border: "7px solid solid #fa2f00", borderWidth: "7px 200px",};
+const electricBorder = {border: "7px solid #efc10b", borderWidth: "7px 200px",};
+const grassBorder = {border: "7px solid #05bb0e", borderWidth: "7px 200px",};
+const fireBorder =  {border: "7px solid #ea0600", borderWidth: "7px 200px",};
+const iceBorder = {border: "7px solid #00d7ea", borderWidth: "7px 200px",};
+const darkBorder = {border: "7px solid #000000", borderWidth: "7px 200px",};
+const dragonBorder = {border: "7px solid #7caa4e", borderWidth: "7px 200px",};
+const normalBorder = {border: "7px solid #a6a6a6", borderWidth: "7px 200px",}; 
+
 useEffect(() => {
+    
 // sets color for border around PokeInfo dependant on pokemon type
-if (pokeType === "fairy"){setBorderColor("#e87a9c");}
-else if (pokeType === "poison" || pokeType === "ghost" || pokeType === "psychic"){setBorderColor("#800fc1");}
-else if (pokeType === "water"){setBorderColor("#1078c0");}
-else if (pokeType === "ground"){setBorderColor("#872619");}
-else if (pokeType === "rock"){setBorderColor("#5b4231");}
-else if (pokeType === "fighting"){setBorderColor("#fa2f00");}
-else if (pokeType === "electric"){setBorderColor("#efc10b");}
-else if (pokeType === "grass"){setBorderColor("#05bb0e");}
-else if (pokeType === "fire"){setBorderColor("#ea0600");}
-else if (pokeType === "ice"){setBorderColor("#00d7ea");}
-else if (pokeType === "dark"){setBorderColor("#000000");}
-else if (pokeType === "dragon" || pokeType === "bug" ){setBorderColor("#7caa4e");}
-else if (pokeType === "normal" || pokeType === "flying" || pokeType === "steel"){setBorderColor("#a6a6a6");}
-  }, [pokeType]);
+if (pokeType === "fairy"){setBorderStyle(fairyBorder)}
+else if (pokeType === "poison" || pokeType === "ghost" || pokeType === "psychic"){setBorderStyle(poisonBorder);}
+else if (pokeType === "water"){setBorderStyle(waterBorder);}
+else if (pokeType === "ground"){setBorderStyle(groundBorder);}
+else if (pokeType === "rock"){setBorderStyle(rockBorder);}
+else if (pokeType === "fighting"){setBorderStyle(fightingBorder);}
+else if (pokeType === "electric"){setBorderStyle(electricBorder);}
+else if (pokeType === "grass"){setBorderStyle(grassBorder)}
+else if (pokeType === "fire"){setBorderStyle(fireBorder)}
+else if (pokeType === "ice"){setBorderStyle(iceBorder)}
+else if (pokeType === "dark"){setBorderStyle(darkBorder)}
+else if (pokeType === "dragon" || pokeType === "bug" ){setBorderStyle(dragonBorder)}
+else if (pokeType === "normal" || pokeType === "flying" || pokeType === "steel"){setBorderStyle(normalBorder)}
+}, [pokeType]);
+
 
 // once loaded shows input forms and displays PokeInfo from default search
 if(loaded){return(
@@ -62,7 +78,7 @@ if(loaded){return(
     className="searchBar" />
     <input type="submit" placeholder="Submit" className="submitButton" />
     </form>
-    <div className="pokesearchBorderBox" style={borderstyle}>
+    <div className="pokesearchBorderBox" id="BorderBox" style={borderStyle}>
     <PokeInfo data={pokeinfo} loading={loadedStatus} />
     </div>
         </div>)}

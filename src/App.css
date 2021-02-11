@@ -46,31 +46,6 @@ background-color: #9c0101;
     font-size: 15pt;
     height: 40px;}
 
-.extendedevolutionrow {display: flex;
-flex-direction: row;
-justify-content: center;}
-
-.extendedevolutionrow .column {margin-left: 6%;
-margin-right: 6%;
-position: relative;
-right: 1%;}
-
-.ExtendedCards .evolvesFrom  {position: relative;
-top: -80px;
-left: -0.002%;}
-
-.ExtendedCards #evolutionArrowSingle  {position: relative;
-  left: -0.01%;}
-
-.ExtendedCards .row {height: 460px;}
-
-.ExtendedCards .pokeName {  font-size: 40pt;}
-
-.evolutionrow {display: flex;
-flex-direction: row;
-width: 50%;
-position: relative;
-left: 28%;}
 
 .App {
   text-align: center;
@@ -101,6 +76,7 @@ margin-bottom: 3px;}
 flex-direction: column;
 width: 200%;
 margin-top: -58%;
+background-color: white;
 margin-left: 307%;
 border: 1px solid black;}
 
@@ -111,6 +87,31 @@ margin-left: 4%!important;
 max-height: 1250px;
 margin: 3% 0;}
 
+.extendedevolutionrow {display: flex;
+  flex-direction: row;
+  justify-content: center;}
+  
+  .extendedevolutionrow .column {margin-left: 6%;
+  margin-right: 6%;
+  position: relative;
+  right: 1%;}
+  
+  .ExtendedCards .evolvesFrom  {position: relative;
+  top: -80px;
+  left: -0.002%;}
+  
+  .ExtendedCards #evolutionArrowSingle  {position: relative;
+    left: -0.01%;}
+  
+  .ExtendedCards .row {height: 460px;}
+  
+  .ExtendedCards .pokeName {  font-size: 40pt;}
+  
+  .evolutionrow {display: flex;
+  flex-direction: row;
+  width: 50%;
+  position: relative;
+  left: 28%;}  
 
 .evolvesFrom {position: relative;
 top: 100px;}
@@ -243,7 +244,8 @@ margin-top: -1%;}
       position: relative;
       left: -65%;
 }
-    
+
+.pokesearchBorderBox {margin-top: 20px;}
     
     #pokeNameRow .right {min-width: 50%;
     margin-top: 2.15%;}
