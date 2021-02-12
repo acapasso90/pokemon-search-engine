@@ -37,19 +37,19 @@ function searchPokemon () {    const APIurl = `https://pokeapi.co/api/v2/pokemon
 axios.get(APIurl).then(setInfo);}
 
 
-const fairyBorder = {borderTop: "7px solid #e87a9c", borderBottom: "7px solid #e87a9c", borderRight: "200px solid #e87a9c", borderLeft: "200px solid #e87a9c",};
-const poisonBorder = {borderTop: "7px solid #800fc1", borderBottom: "7px solid #800fc1", borderRight: "200px solid #800fc1", borderLeft: "200px solid #800fc1",};
-const waterBorder = {border: "7px solid #1078c0", borderWidth: "7px 200px",};
-const groundBorder = {border: "7px solid #872619", borderWidth: "7px 200px",};
-const rockBorder = {border: "7px solid #5b4231", borderWidth: "7px 200px",};
-const fightingBorder = {border: "7px solid solid #fa2f00", borderWidth: "7px 200px",};
-const electricBorder = {border: "7px solid #efc10b", borderWidth: "7px 200px",};
-const grassBorder = {border: "7px solid #05bb0e", borderWidth: "7px 200px",};
-const fireBorder =  {border: "7px solid #ea0600", borderWidth: "7px 200px",};
-const iceBorder = {border: "7px solid #00d7ea", borderWidth: "7px 200px",};
-const darkBorder = {border: "7px solid #000000", borderWidth: "7px 200px",};
-const dragonBorder = {border: "7px solid #7caa4e", borderWidth: "7px 200px",};
-const normalBorder = {border: "7px solid #a6a6a6", borderWidth: "7px 200px",}; 
+const fairyBorder = {borderTop: "40px solid #e87a9c", borderBottom: "40px solid #e87a9c", borderRight: "200px solid #e87a9c", borderLeft: "200px solid #e87a9c", borderRadius: "3px"};
+const poisonBorder = {borderTop: "40px solid #800fc1", borderBottom: "40px solid #800fc1", borderRight: "200px solid #800fc1", borderLeft: "200px solid #800fc1", borderRadius: "3px"};
+const waterBorder = {borderTop: "40px solid #1078c0", borderBottom: "40px solid #1078c0", borderRight: "200px solid #1078c0", borderLeft: "200px solid #1078c0", borderRadius: "3px"};
+const groundBorder = {borderTop: "40px solid #872619", borderBottom: "40px solid #872619", borderRight: "200px solid #872619", borderLeft: "200px solid #872619", borderRadius: "3px"};
+const rockBorder = {borderTop: "40px solid #5b4231", borderBottom: "40px solid #5b4231", borderRight: "200px solid #5b4231", borderLeft: "200px solid #5b4231", borderRadius: "3px"};
+const fightingBorder = {borderTop: "40px solid #fa2f00", borderBottom: "40px solid #fa2f00", borderRight: "200px solid #fa2f00", borderLeft: "200px solid #fa2f00", borderRadius: "3px"};
+const electricBorder = {borderTop: "40px solid #efc10b", borderBottom: "40px solid #efc10b", borderRight: "200px solid #efc10b", borderLeft: "200px solid #efc10b", borderRadius: "3px"};
+const grassBorder = {borderTop: "40px solid #05bb0e", borderBottom: "40px solid #05bb0e", borderRight: "200px solid #05bb0e", borderLeft: "200px solid #05bb0e", borderRadius: "3px"};
+const fireBorder =  { borderTop: "40px solid #ea0600", borderBottom: "40px solid #ea0600", borderRight: "200px solid #ea0600", borderLeft: "200px solid #ea0600", borderRadius: "3px"};
+const iceBorder = {borderTop: "40px solid #00d7ea", borderBottom: "40px solid #00d7ea", borderRight: "200px solid #00d7ea", borderLeft: "200px solid #00d7ea", borderRadius: "3px"};
+const darkBorder = {borderTop: "40px solid #000000", borderBottom: "40px solid #000000", borderRight: "200px solid #000000", borderLeft: "200px solid #000000", borderRadius: "3px"};
+const dragonBorder = {borderTop: "40px solid #7caa4e", borderBottom: "40px solid #7caa4e", borderRight: "200px solid #7caa4e", borderLeft: "200px solid #7caa4e", borderRadius: "3px"};
+const normalBorder = {borderTop: "40px solid #a6a6a6", borderBottom: "40px solid #a6a6a6", borderRight: "200px solid #a6a6a6", borderLeft: "200px solid #a6a6a6", borderRadius: "3px"}; 
 
 useEffect(() => {
     
