@@ -8,6 +8,7 @@ color: #610202;}
 body {font-size: 18pt;}
 
 form {position: relative;
+  white-space: nowrap;
 left: 138px;
 width: 50%;}
 ::selection {background-color: #9c0101;
@@ -251,12 +252,13 @@ margin-top: -1%;}
     margin-top: 2.15%;}
     
     .searchBar {height: 35px;
-      width: 50%;
+      width: 47%;
       font-size: 15pt;
-      margin-left: 32%;
+      margin-left: 52%;
     margin-right: 2px;}
 
-    .ExtendedPokeSearch .searchBar {width: 61%;}
+    .ExtendedPokeSearch .searchBar {width: 61%;
+    margin-left: 15%;}
     
     .statTitle {font-weight: bold;}
     
